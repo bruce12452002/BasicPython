@@ -1,0 +1,60 @@
+# list set dict str tuple
+# len() 　長度
+# max()　最大值
+# min()　最小值
+# list() 轉 list，可以自己轉自己，dict 只會保留 key，字串會每個字分開
+# tuple() 轉 tuple，可以自己轉自己，dict 只會保留 key，字串會每個字分開
+# str() 轉 string，可以自己轉自己，dict 「會」保留 key-value
+# set() 轉 set，可以自己轉自己，dict 只會保留 key，字串會每個字分開
+# 無法轉 dict，因為 dict 要 k-v pair
+
+# sorted 排序過後，不會變動原來的資料結構，且型態都會變成 list
+my_list = [9, 1, 5, 73, 7, 88]
+result = sorted(my_list)
+print(f"{result}, {type(result)}, {my_list}")
+
+my_tuple = (9, 1, 5, 73, 7, 88)
+result = sorted(my_tuple, reverse=True)  # 倒序
+print(f"{result}, {type(result)}, {my_tuple}")
+
+my_str = "一二三四五六"
+result = sorted(my_str)
+print(f"{result}, {type(result)}, {my_str}")
+
+print("============ 產生器運算式 ============")
+# 快速初始化
+my_list = ["ab,c", "d,ef", "ghi"]
+my_set = {"ab,c", "d,ef", "ghi"}
+my_tuple = ("ab,c", "d,ef", "ghi")
+
+print(set(a for li in my_list for a in li.split(",")))
+print(tuple(a for li in my_list for a in li.split(",")))
+
+print(list(b for li in my_set for b in li.split(",")))
+print(tuple(b for li in my_set for b in li.split(",")))
+
+print(list(b for li in my_tuple for b in li.split(",")))
+print(set(a for li in my_tuple for a in li.split(",")))
+
+# 快速加總
+print(sum(i * 2 for i in range(10)))
+
+a_data = [5, 6, 7]
+b_data = [3, 4, 5]
+print(sum(i * j for i, j in zip(a_data, b_data)))
+
+
+# 快速取最大、最小
+class Animal:
+    def __init__(self, num, name):
+        self.num = num
+        self.name = name
+
+
+my_animal = [Animal(50, "五十"), Animal(7, "七"), Animal(24, "二十四")]
+print(max((a.num, a.name) for a in my_animal))
+print(min((a.num, a.name) for a in my_animal))
+
+# 快速倒取並放在複合型態裡
+data = "abcde"
+print(tuple(data[i] for i in range(len(data) - 1, -1, -1)))

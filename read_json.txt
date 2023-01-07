@@ -1,0 +1,4 @@
+[
+    {"name": "孫悟空", "attack": 90}, {"name": "牛魔王", "attack": 85}, {"name": "如來佛", "attack": 1000},
+    {"name": "豬八戒", "attack": 65}, {"name": "鐵扇公主", "attack": 70}, {"name": "二狼犬", "attack": 80}
+]
