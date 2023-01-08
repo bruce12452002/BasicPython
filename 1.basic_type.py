@@ -35,7 +35,7 @@ print("============ 宣告變數 ============")
 # https://docs.python.org/zh-tw/3/reference/lexical_analysis.html#identifiers
 # = += -= *= /= //= %= **=，python 沒有 ++ -- 語法
 a = 2
-a += 5
+a += 5  # a = a + 5
 print(a)
 x, y, z = 1, 2.3, "ooo"
 print(x, y, z)
@@ -45,19 +45,20 @@ del a  # 刪除 a 變數
 print("============ 宣告字串的三種方式 ============")
 a = 'a'
 b = "b"
+# 三個"和三個'是一樣意思
 c = """
 abc
     123
     """  # 注意 """ 左邊的空格
-d = "\"yeah\""  # 跳脫字元 \
+d = '"yeah"'  # 跳脫字元 \
 print(a, b, c, d)
 
 print("============ 字串格式化一 ============")
-# %d %s %f 為 digit(數字) string(字串) float(浮點數)
+# %d %s %f 為 digital(數字) string(字串) float(浮點數)
 # 格式為 "%s" % (取代 %s 的字串)，如果只有一個要取代，圓括可不寫
 # %s 什麼都可以接收；%d 和 %f 只能傳數字，否則報錯
 # %d 給浮點數會無條件括去小數；%f 給整數會自動將後面 .0
-e = "Hello! %s" % "world"
+e = "Hel%slo! " % "world"
 print(e)
 f = "%s %s" % ("Haha!", e)
 print(f)
