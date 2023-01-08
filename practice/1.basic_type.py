@@ -2,10 +2,11 @@
 i = 5
 s = "str"
 
-print(i, s, )
+print(i, s, sep=",")
 
 # 印出 bool 型態
 b = True
+print(type(b))
 
 # 寫出 1+2+3+...+100 的公式，公式為：(前項+後項)乘項數除2，然後轉成整數型態，並在最後印出「 yeah\n」，全部只有一行
 print(int((1 + 100) * 100 / 2), end="yeah\n")
