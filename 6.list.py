@@ -1,4 +1,6 @@
 # list 用的是方括號
+# list、tuple、range 都叫 sequence
+
 print("============ 初始化 list 一 ============")
 a = list("abc")
 # a = list(1)  # is not iterable
