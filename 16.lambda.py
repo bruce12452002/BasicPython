@@ -12,6 +12,10 @@ def my_lambda(x, y):
 
 print(my_lambda(5, 6))
 
+print("============ lambda 也可用特殊參數 ============")
+lam = lambda p, /, s="str", *, k="123": print(p + 1)
+lam(10)
+
 print("============ 傳 lambda ============")
 
 
