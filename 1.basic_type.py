@@ -99,9 +99,10 @@ print(bool(""))  # bool("False") 仍然是 True
 print(bool(()))
 print(bool([]))
 print(bool({}))
+print(bool(set()))
 print(bool(None))
 print("以上都是 False，其他都是 True")
-print(bool({None: None}))  # True
+print(bool({None: None}))  # True，bool({False, False})、bool({"", ""}) 也算 True
 
 print("============ 字串常用方法 ============")
 # 字串是不可變的
