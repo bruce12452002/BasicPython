@@ -11,7 +11,7 @@ bbb = 10
 # print(aaa is bbb)
 # print(aaa is not bbb)
 print(not True)  # 沒有「!」寫法
-if aaa == 15 & bbb == 10:
+if aaa == 15 & bbb == 10:  # aaa & bbb 等於 10 為True
     print("yes")
 else:
     print("no")
