@@ -52,11 +52,23 @@ abc
 d = "\"yeah\""  # 跳脫字元 \
 print(a, b, c, d)
 
+print("============ 註解 ============")
+#
+
+"""
+
+"""
+
+
 print("============ 字串格式化一 ============")
 # %d %s %f 為 digit(數字) string(字串) float(浮點數)
 # 格式為 "%s" % (取代 %s 的字串)，如果只有一個要取代，圓括可不寫
 # %s 什麼都可以接收；%d 和 %f 只能傳數字，否則報錯
 # %d 給浮點數會無條件括去小數；%f 給整數會自動將後面 .0
+print("Hello! %s")
+# print("Hello! %" % ("world"))
+print("Hello! %s" % ("%"))
+
 e = "Hello! %s" % "world"
 print(e)
 f = "%s %s" % ("Haha!", e)
@@ -96,6 +108,7 @@ print("============ 轉布林 ============")
 print(bool(0.0))
 print(bool(0))
 print(bool(""))  # bool("False") 仍然是 True
+print(bool(None))
 print(bool(()))
 print(bool([]))
 print(bool({}))
