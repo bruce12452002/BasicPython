@@ -16,3 +16,10 @@ money = 5
 
 # 6.將以下字串分開成獨立的五種水果，並刪除不需要的空格
 fruits = "blueberry, pineapple, durian, kiwi,tomato"
+
+# 7.將變數 f，靠左、置中、靠右對齊
+f = 987.654
+
+# 8.使用 str 的 format 功能，將 x 印出 + 號、y 前印出空格
+# x、y 小數點只能印出 2 位
+x, y = 578.6, 67.2
