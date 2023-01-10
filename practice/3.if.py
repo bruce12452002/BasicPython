@@ -51,3 +51,9 @@ elif month == 2:
 # 6.如果 a 是 apple 而且 m 「是」 milk 就顯示蘋果牛奶；如果 a 是 apple 而且 m 「不是」 milk 就顯示蘋果
 a = "apple"
 m = 'milk'
+if a == "apple":
+    if m == "milk":
+        print("蘋果牛奶")
+    else:
+        print("蘋果")
+    # 還有更進階的寫法，上課會說明，整個答案上課都會再說明，我知道你還有點卡，不用緊張
