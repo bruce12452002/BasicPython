@@ -1,6 +1,6 @@
 ### Python 課程大鋼
 + 安裝 python 和 PyCharm，注意有環境變數選項要勾
-+ 命令行打 python3 -V 有版本訊息就是 ok 了
++ 命令行打 python -V 有版本訊息就是 ok 了
 + py *.py 執行程式
 ---
 1. 單一型態 int float str bool
