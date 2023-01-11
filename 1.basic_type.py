@@ -167,6 +167,13 @@ print(bool({None: None}))  # True，bool({False, False})、bool({"", ""}) 也算
 print("============ 字串常用方法 ============")
 # 字串是不可變的
 my_string = "abc apple"
+
+# 大小寫
+print(my_string.upper())
+print(my_string.lower())
+print(my_string.capitalize())
+print(my_string)
+
 print(my_string[-1])
 print(my_string[0])
 print(my_string.index("a"))
