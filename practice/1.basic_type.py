@@ -17,9 +17,16 @@ print(i1 // i2, i1 % i2)
 
 # 5.用兩種格式化的方式，印出「今天我撿到 5 元」
 money = 5
+m = "今天我撿到 %s 元" % money
+print(m)
 
 # 6.將以下字串分開成獨立的五種水果，並刪除不需要的空格
 fruits = "blueberry, pineapple, durian, kiwi,tomato"
+print(fruits.replace(", ", ","))
+
+# 如果題目是 @ 隔開，但結果還是要逗號隔開
+fruits = "blueberry@ pineapple@ durian@ kiwi@tomato"
+print(fruits.replace("@ ", ",").replace("@", ","))
 
 # 7.將變數 f，靠左、置中、靠右對齊
 f = 987.654

@@ -1,8 +1,24 @@
 # 1.將考試分數分成四個等級 60 80 90 100，不及格~59、60~79、80~89、90~100，顯示 D C B A 等級
-# score = input("請輸入考試分數：")
-
+score = int(input("請輸入考試分數："))
+if score <= 59:
+    print("D")
+elif score <= 79:
+    print("C")
+elif score <= 89:
+    print("B")
+elif score <= 100:
+    print("A")
 
 # 2.將電影分級： 0~5歲為普遍級； 6~11歲為保護級； 12~17為輔導級; 18以上為限制級
+age = 8
+if age <= 5:
+    print("普遍級")
+elif age <= 11:
+    print("保護級")
+elif age <= 17:
+    print("輔導級")
+elif age >= 18:
+    print("限制級")
 
 # 3.輸入一個整數，判斷是否為奇數，是就顯示奇數；不是顯示偶數
 i = 50
@@ -29,6 +45,7 @@ if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month =
 elif month == 4 or month == 6 or month == 9 or month == 11:
     print(30)
 elif month == 2:
+    # 方法一
     if year % 4 == 0:
         if year % 100 == 0:
             # 以下 if-else 可精簡寫法： leap = year % 400 == 0
@@ -46,14 +63,25 @@ elif month == 2:
     else:
         print(28)
 
-    # 一行的寫法 year % 4 == 0 and (year % 100 != 0 || year % 400 == 0)
+# 方法二
+if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+    print(29)
+else:
+    print(28)
 
 # 6.如果 a 是 apple 而且 m 「是」 milk 就顯示蘋果牛奶；如果 a 是 apple 而且 m 「不是」 milk 就顯示蘋果
 a = "apple"
 m = 'milk'
+
+# 方法一
 if a == "apple":
     if m == "milk":
         print("蘋果牛奶")
     else:
         print("蘋果")
-    # 還有更進階的寫法，上課會說明，整個答案上課都會再說明，我知道你還有點卡，不用緊張
+
+# 方法二
+if a == "apple" and m == "milk":
+    print("蘋果牛奶")
+if a == "apple" and m != "milk":
+    print("蘋果")
