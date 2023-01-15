@@ -195,3 +195,5 @@ print(my_string2.strip(""))  # 什麼都沒發生，所以不要用空字串來�
 
 my_string3 = "abaac  appleba"
 print(my_string3.strip("ab"))  # 整個字串裡，有 a 或 b 都會清除
+print(my_string3.removeprefix("ab"))  # 字串開頭是 ab 會刪除
+print(my_string3.removesuffix("ab"))  # 字串結尾是 ab 會刪除
