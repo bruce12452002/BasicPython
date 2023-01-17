@@ -1,5 +1,5 @@
 # 變數範圍以找最近的變數為主，沒有就往上找，不會往下找
-# global：在最外層設定變數
+# global：在最外層設定或取得變數
 # nonlocal：從本層到最外層，將變數傳播在中間層，也就是沒有本層和最外層
 
 def scope():
@@ -11,7 +11,7 @@ def scope():
         # a = "333"
 
         def do_nonlocal2():
-            nonlocal a  # 如果 a 在之前定義會報錯；此行的 a 並不是 None
+            nonlocal a  # 如果 a 在之前定義會在執行期報錯；此行的 a 並不是 None
             a = "333"  # 這行如果沒定義 a，會抓外層的
 
         do_nonlocal2()
