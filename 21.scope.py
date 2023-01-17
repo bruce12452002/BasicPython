@@ -2,33 +2,34 @@
 # global：在最外層設定或取得變數
 # nonlocal：從本層到最外層，將變數傳播在中間層，也就是沒有本層和最外層
 
-def scope():
-    def do_local():
-        a = "222"
+
+def outer():
+    a = 2
+
+    def inner():
+        # a = 3
+        print("inner", a)  # 最接近自己的先找，一直找到 global
 
     def do_nonlocal():
         # nonlocal a
-        # a = "333"
+        # print("do_nonlocal", a)
+        a = 4
 
-        def do_nonlocal2():
-            nonlocal a  # 如果 a 在之前定義會在執行期報錯；此行的 a 並不是 None
-            a = "333"  # 這行如果沒定義 a，會抓外層的
+        def sub_do_nonlocal():
+            nonlocal a  # 不會找自己的變數，往外一直找，但不會找 global
+            print("sub_do_nonlocal", a)
 
-        do_nonlocal2()
+        sub_do_nonlocal()
 
     def do_global():
         global a
-        a = "444"
+        a = 5
 
-    a = "111"
-    do_local()
-    print("do_local 之後，a=", a)
+    inner()
     do_nonlocal()
-    print("do_nonlocal 之後，a=", a)
-    do_global()
-    print("do_global 之後，a=", a)
+    print("outer", a)
 
 
-scope()
+a = 1
+outer()
 print("最外層a=", a)
-# 寫在這層的變數就是 global
