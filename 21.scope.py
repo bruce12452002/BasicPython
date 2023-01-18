@@ -2,13 +2,12 @@
 # global：在最外層設定或取得變數
 # nonlocal：從本層到最外層，將變數傳播在中間層，也就是沒有本層和最外層
 
-
 def outer():
     a = 2
 
     def inner():
         # a = 3
-        print("inner", a)  # 最接近自己的先找，一直找到 global
+        print("inner", a)  # 最接近自己的先找，一直找到 global，但不能改值
 
     def do_nonlocal():
         # nonlocal a
