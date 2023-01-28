@@ -10,13 +10,23 @@ print()
 num = 9
 sum = 0
 for i in range(1, num + 1):
+    # 方法一
     temp = "1"
     j = 1
     while j < i:
-        temp = temp + "1"
+        temp += "1"
         j += 1
     # print(temp)
     sum += int(temp)
+
+    # 方法二
+    # temp = 1
+    # j = 1
+    # while j < i:
+    #     temp = temp * 10 + 1
+    #     j += 1
+    # # print(temp)
+    # sum += temp
 print(sum)
 print()
 
