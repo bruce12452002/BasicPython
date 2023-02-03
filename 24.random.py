@@ -12,10 +12,10 @@ print(random.randrange(3, 4))  # 回傳兩個參數之間的整數，「不」�
 print(random.randrange(1, 6, 2))  # 回傳兩個參數之間的整數，「不」包括第二個參數，間隔為2，所以這個例子只會出現1 3 5
 
 print("============ choice ============")
-# choice 接收 seq，以下都只會取得 1 5 10
-print(random.choice([1, 5, 10]))
-print(random.choice((1, 5, 10)))
-print(random.choice(range(1, 6, 4)))
+# choice 接收 seq，以下都只會取得 1 5 9
+print(random.choice([1, 5, 9]))
+print(random.choice((1, 5, 9)))
+print(random.choice(range(1, 10, 4)))
 
 print("============ shuffle ============")
 # 打亂 list 的位置，只支援 list

@@ -1,12 +1,15 @@
 # list set dict str tuple
-# len() 　長度
-# max()　最大值
-# min()　最小值
+# len()  長度
+# max()　最大值，只支援敗字和浮點數，dict 只會抓 key
+# min()　最小值，只支援敗字和浮點數，dict 只會抓 key
+# sum()  加總，只支援敗字和浮點數，dict 只會抓 key
 # list() 轉 list，可以自己轉自己，dict 只會保留 key，字串會每個字分開
 # tuple() 轉 tuple，可以自己轉自己，dict 只會保留 key，字串會每個字分開
 # str() 轉 string，可以自己轉自己，dict 「會」保留 key-value
 # set() 轉 set，可以自己轉自己，dict 只會保留 key，字串會每個字分開
 # 無法轉 dict，因為 dict 要 k-v pair
+# + 和 *：只支援 list 和 tuple，在最後增加元素和元素增加幾倍的意思
+# in 和 not in：判斷元素是否在四種資料結構裡 "a" in [1, 2, 3]
 
 # sorted 排序過後，不會變動原來的資料結構，且型態都會變成 list
 my_list = [9, 1, 5, 73, 7, 88]

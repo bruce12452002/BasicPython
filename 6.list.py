@@ -57,6 +57,10 @@ myList2.remove("a")  # 刪除第一次得到的值，元素必需存在，否則
 myList2.clear()
 print(myList2)
 
+print("============ 常用方法-其他 ============")
+myList5 = [7, 6.2, 5, 4.5]
+print(sum(myList5), max(myList5), min(myList5))  # 只支援數字和浮點數
+
 print("============ 轉換 ============")
 myList2 = [1, 2, 3]
 s1 = set(myList2)

@@ -20,7 +20,7 @@ d2 = dict([('d', "duck"), ('e', "elephant"), ('f', "fox")])
 print(f"{d2}, {type(d2)}", end=" ")
 print()
 
-d3 = {x: x**2 for x in (2, 4, 6)}  # x 為 key，value 為平方
+d3 = {x: x ** 2 for x in (2, 4, 6)}  # x 為 key，value 為平方
 print(f"{d3}, {type(d3)}", end=" ")
 print()
 
@@ -46,14 +46,25 @@ print(sango["關羽"])
 print(sango["關羽"]["攻擊力"])
 
 print("============ 常用方法-增加 ============")
+print(my_dict3)
+my_dict3.setdefault("a", 1)  # 如果 key 沒有才新增
+my_dict3.setdefault("a", 100)
+my_dict3.setdefault("b")  # 只有一個參數時，value 為 None
+print(my_dict3)
+
+# 從其他資料結構轉成 dict，如果有第二個參數為 key 的 value
+print(dict.fromkeys(["a", "b"]))
+print(dict.fromkeys(("a", "b")))
+print(dict.fromkeys({"a", "b"}, 100))
+print(dict.fromkeys(my_dict3))
+
 print("============ 常用方法-修改 ============")
 my_dict4 = {"k1": 100, "k2": 20}
 my_dict4["k3"] = 300  # key 沒有就增加，有就修改
 my_dict4["k2"] = 200  # key 沒有就增加，有就修改
 print(my_dict4)
-
-print(my_dict4.pop("k3"))
-# print(my_dict4.pop("k3"))  # 不可刪除不存在的key，執行期會報錯
+my_dict4_b = dict(k2=2000, k4=40)
+my_dict4.update(my_dict4_b)  # 將右邊的 dict 覆蓋到左邊的 dict
 print(my_dict4)
 
 print("============ 常用方法-查詢 ============")
@@ -63,7 +74,14 @@ all_values = my_dict4.values()
 print(f"{all_key}, {type(all_key)}")
 print(f"{all_values}, {type(all_values)}")
 
+print(my_dict4.get("k1"), my_dict4.get("k3"), my_dict4.get("k3", 50))  # 取得對應的值，沒有就回傳 None 或第二個參數
+
 print("============ 常用方法-刪除 ============")
+print(my_dict4.pop("k3"))  # 回傳並刪除
+print(my_dict4.pop("k3", "yeah"))  # 不可刪除不存在的key，執行期會報錯，但如果有第二個參數，會回傳第二個參數
+print(my_dict4.popitem())  # 隨機回傳一個元素並刪除
+print(my_dict4)
+
 del my_dict4["k1"]  # key 不在會報錯
 print(my_dict4)
 

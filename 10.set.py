@@ -29,7 +29,7 @@ print(f"{my_set3}, {type(my_set3)}")
 
 print("============ 常用方法-查詢 ============")
 print(5 in my_set1)
-new_my_set = my_set1.pop()  # 取一個元素，然後刪除，但 set 並無順序，加入時不曉得誰會在第一個
+new_my_set = my_set1.pop()  # 取第一個元素並刪除，但 set 並無順序，加入時不曉得誰會在第一個
 print(new_my_set)
 
 print("============ 常用方法-增加 ============")
@@ -41,37 +41,59 @@ print(my_set2.pop())
 print(my_set2)
 
 print("============ 常用方法-修改 ============")
+my_set2.update({1: "xxx", "a": "bbb"})  # 將資料結構覆蓋到左邊，如果資料結構是 dict 只取 key
 
 print("============ 常用方法-刪除 ============")
 my_set2.remove("a")  # 元素必需存在，否則報錯
+my_set2.discard("a")  # 元素不存在也不會報錯
 print(my_set2)
 
 my_set2.clear()
 print(my_set2)
 
-print("============ 合併一 ============")
-# 合併
+print("============ set 運算-str ============")
+# 聯集 union，等同 |
+# 交集 intersection，等同 &
+# 差集 difference，等同 -
+# 互斥 symmetric_difference，等同 ^
+
 a = set('abracadabra')
 b = set('alacazam')
 print(f"{a}, {b}")
-print(a - b)  # 以左為主，將「相同」的去除
-print(a & b)  # 以左為主，將「不同」的去除
 print(a | b)  # 將兩個組成一個 set
+print(a.union(b))
+print(a & b)  # 以左為主，將「不同」的去除
+print(a.intersection(b))
+print(a - b)  # 以左為主，將「相同」的去除
+print(a.difference(b))
 print(a ^ b)  # XOR，左有右沒有或者右有左沒有的就留下
+print(a.symmetric_difference(b))
 print(f"{a}, {b}")  # 以上都不會改變原值
 
-print("============ 合併二 ============")
+print("============ set 運算-set ============")
 diff1 = {9, 5, 8, 4}
 diff2 = {7, 3, 2, 9}
 new_diff = diff1.difference(diff2)  # 845 回傳左有右沒有的元素，「不會」改變兩組原集合
 print(diff1 - diff2, new_diff)
-new_diff2 = diff1.union(diff2)  # 回傳合併的兩組元素，「不會」改變原集合
-print(diff1 | diff2, new_diff2)
 
-diff1.difference_update(diff2)  # 會刪除第一組在兩組裡一樣的元素，沒回傳值，「會」改變左邊的原集合
+diff1.difference_update(diff2)  # 和 difference 一樣，但「會」改變左邊的原集合
 print(diff1)  # 845
 print(diff2)
+
+new_diff2 = diff1.union(diff2)  # 回傳合併的兩組元素，「不會」改變原集合
+print(diff1 | diff2, new_diff2)
 print(len(new_diff2))
+
+print("============ 子 set ============")
+# issubset()，等同 <=，左邊是否為右邊的子 set
+# issuperset()，等同 >=，右邊是否為左邊的子 set
+
+diff1 = {9, 5, 8, 4}
+diff2 = {4, 8, 5, 9, 7}
+print(diff1.issubset(diff2))
+print(diff1 <= diff2)
+print(diff2.issuperset(diff1))
+print(diff2 >= diff1)
 
 print("============ 轉換 ============")
 my_set2 = {1, 2, 3}

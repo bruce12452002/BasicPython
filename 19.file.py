@@ -1,5 +1,15 @@
-# open 打開檔案；mode： r(read)w(write)a(append)預設為r  encoding 預設是 None
+import os
+
+print("============ os ============")
+p = '.'
+print(os.path.exists(p))
+print(os.path.isfile(p))
+print(os.path.isdir(p))
+# os.mkdir(p + "/xxx")  # 有會報錯
+# os.rmdir(p + "/xxx")  # 沒有會報錯
+
 import time
+# open 打開檔案；mode： r(read)w(write)a(append)預設為r  encoding 預設是 None
 
 print("============ 讀檔一 ============")
 read_file = open("test.txt", "r", encoding="UTF-8")
