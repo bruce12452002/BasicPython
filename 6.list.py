@@ -11,6 +11,7 @@ myList1 = [1, 2, 3]
 myList2 = ["1", 2, False]
 print(f"{myList1}, {type(myList1)}")
 print(f"{myList2}, {type(myList2)}")
+print(list({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 
 print("============ list 可嵌套 ============")
 myList3 = [[1, 2, 3], ["1", 2, False]]
@@ -67,6 +68,7 @@ s1 = set(myList2)
 s2 = tuple(myList2)
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+# dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
 
 print("============ loop + list ============")
 
