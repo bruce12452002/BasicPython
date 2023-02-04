@@ -6,6 +6,8 @@ my_set1 = {1, 3, 5, 7, 9, 7, 5, 3, 1}  # {} 表示 dict，不是空 set
 my_set2 = set("abc")  # 會拆開成三個元素  # set() 是空 set
 print(f"{my_set1}, {type(my_set1)}")
 print(f"{my_set2}, {type(my_set2)}")
+print(set({"abc": "ddd"}))  # 只會有 key，key 不會拆開
+print({"abc": "ddd"})  # 只會有 key，key 不會拆開
 
 print("============ 可 hash ============")
 digit = 1
@@ -101,6 +103,7 @@ s1 = list(my_set2)
 s2 = tuple(my_set2)
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+# dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
 
 print("============ for + set ============")
 for e in new_diff2:

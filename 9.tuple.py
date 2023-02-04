@@ -7,13 +7,13 @@ print(f"{my_tuple1}, {type(my_tuple1)}")
 print(f"{my_tuple2}, {type(my_tuple2)}")
 
 print("============ 一個元素的 tuple ============")
-print(tuple({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 my_tuple3 = tuple("abc")
 # my_tuple4 = (False)  # 這樣子還是 bool 型態
 my_tuple5 = (False,)  # 這樣子才是 tuple 型態
 print(f"{my_tuple3}, {type(my_tuple3)}")  # 會拆開成三個元素
 # print(f"{my_tuple4}, {type(my_tuple4)}")
 print(f"{my_tuple5}, {type(my_tuple5)}")
+print(tuple({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 
 print("============ 多個元素的 tuple ============")
 my_tuple6 = "a", 1, True
@@ -25,7 +25,7 @@ print(f"{my_tuple7}, {type(my_tuple7)}")
 # print(f"{my_tuple8}, {type(my_tuple8)}")
 # my_tuple7[0] = "b"  # TypeError: 'tuple' object does not support item assignment
 my_tuple7 = "haha"  # 內容不可變，但可以將整個變數指向的記憶體改掉
-print(f"my_tuple7 = {my_tuple7}")
+print(f"my_tuple7 = {my_tuple7}, {type(my_tuple7)}")
 
 print("============ 常用方法 ============")
 my_tuple8 = 1.1, False, "hehe", 1.1, "haha", 1.1
@@ -52,6 +52,7 @@ s1 = list(my_tuple_tuple[0])
 s2 = set(my_tuple_tuple[0])
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+# dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
 
 print("============ loop + tuple ============")
 
