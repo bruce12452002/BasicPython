@@ -8,8 +8,11 @@ print(os.path.isdir(p))
 # os.mkdir(p + "/xxx")  # 有會報錯
 # os.rmdir(p + "/xxx")  # 沒有會報錯
 
-import time
-# open 打開檔案；mode： r(read)w(write)a(append)預設為r  encoding 預設是 None
+
+# open 打開檔案
+# encoding 預設是 None
+# mode： r(read) w(write) a(append) x(execute) t(text) b(binary) +(read and write) 預設為rt
+# 常用的為 r w a r+ w+ a+
 
 print("============ 讀檔一 ============")
 read_file = open("test.txt", "r", encoding="UTF-8")
@@ -36,7 +39,17 @@ write_file.flush()
 write_file.close()
 
 print("============ 寫檔二 ============")
-# with open("test2.txt", "w", encoding="UTF-8") as wf:
-#     wf.write("hello file\n")
-#     wf.write("end")
-#     wf.flush()
+with open("test2.txt", "w", encoding="UTF-8") as wf:
+    wf.write("hello file\n")
+    wf.write("end")
+    wf.flush()
+
+print("============ 讀寫檔 ============")
+with open("test.txt", "a+", encoding="utf-8") as ra:
+    ra.seek(1)  # 注意非 ASCII 編碼的 Byte 大小
+    print(ra.readline(), end=" ")
+
+    ra.seek(13)
+    print(ra.readline(), end=" ")
+
+    ra.write("haha")
