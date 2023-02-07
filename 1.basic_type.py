@@ -104,12 +104,14 @@ print("============ 字串格式化三 ============")
 # 參考 https://docs.python.org/zh-tw/3/library/stdtypes.html#str.format
 print('1.{1} and {0} and {0}'.format('aaa', 'bbb'))  # 手動指定第幾個參數
 
-# 參數自動依照順序
+# 依參數名稱賦值
 print('2.{fa} and {fb} and {0} or {fa}'.format("ccc", fa='aaa', fb='bbb'))  # k=v 只能放在最後面
+
+# 參數自動依照順序
 print('3.{} and {} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和花括號相等
 
-# 自動和手動不可放在一起
-# print('4.{} and {0} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和花括號相等
+# 自動和手動不可放在一起，但自動和手動可和參數名稱混合
+# print('4.{} and {0} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和 {} 相等
 
 # :開頭，如果傳進來的參數位數 > 設定的位數，設定會失效，不會報錯
 # :左邊有數字表示第幾個參數，不寫預設為 0
