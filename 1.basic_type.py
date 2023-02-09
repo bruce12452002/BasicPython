@@ -211,3 +211,6 @@ print(my_string3.removesuffix("ab"))  # 字串結尾是 ab 會刪除
 print("============ Unicode Code ============")
 a = ord('一')
 print(a, '{:x}'.format(a), chr(a))
+
+print("============ 運算元優先級 ============")
+# https://docs.python.org/zh-tw/3/reference/expressions.html#operator-precedence
