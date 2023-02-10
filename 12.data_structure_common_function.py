@@ -11,6 +11,24 @@
 # + 和 *：只支援 list 和 tuple，在最後增加元素和元素增加幾倍的意思
 # in 和 not in：判斷元素是否在四種資料結構裡 "a" in [1, 2, 3]
 
+print("============ 多重賦值-str ============")
+x, y, z = 1, 2.3, "ooo"
+print(x, y)
+x, *y = 1, 2.3, "ooo"
+print(x, y)
+x, *y, z = 1, 2.3, "ooo"
+print(x, y)
+
+print("============ 多重賦值-list tuple set ============")
+myList1 = [1, 2.3, "ooo"]
+x, y, z = myList1
+print(x, y)
+# x, y = myList1
+# print(x, y)
+x, *y = myList1
+print(x, y)
+
+print("============ 排序 ============")
 # sorted 排序過後，不會變動原來的資料結構，且型態都會變成 list
 my_list = [9, 1, 5, 73, 7, 88]
 result = sorted(my_list)
@@ -61,3 +79,34 @@ print(min((a.num, a.name) for a in my_animal))
 # 快速倒取並放在複合型態裡
 data = "abcde"
 print(tuple(data[i] for i in range(len(data) - 1, -1, -1)))
+
+print("============ map ============")
+scores = [50, 70, 90, 28]
+
+
+def add_score(scores: list):
+    result = []
+    for s in scores:
+        result.append(s + 5)
+    return result
+
+
+print(add_score(scores))
+
+
+def add_score2(s: int):
+    return s + 5
+
+
+# print(map(add_score2, scores))
+print(list(map(add_score2, scores)))
+print(list(map(lambda s: s + 5, scores)))
+print(tuple(map(lambda s: s + 5 if s < 60 else s, scores)))
+
+# 例二
+students_scores = [('孫悟空', 50), ('牛魔王', 70), ('豬八戒', 90)]
+print(list(map(lambda s: s[1], students_scores)))
+
+print("============ filter ============")
+print(list(filter(lambda s: s < 60, scores)))
+print(set(map(lambda s: s + 5, filter(lambda s: s < 60, scores))))

@@ -10,7 +10,7 @@ class Animal:
     def my_self(self):
         print(f"{self.name}")
 
-    @staticmethod
+    @staticmethod  # @開頭的語法在 python 裡，叫裝飾器 decorator
     def my_static_method():
         print("static method")
 
