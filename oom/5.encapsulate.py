@@ -10,5 +10,8 @@ class MyEncapsulate:
 
 
 me = MyEncapsulate()
-# print(me.__field)  # __ 開頭的是封裝方法和封裝屬性，不可被外部訪問，只能內部使用
 me.my_field()
+# print(me.__field)  # __ 開頭的是封裝方法和封裝屬性，不可被外部訪問，只能內部使用
+# 可以使用 實體._類別名稱(類別私有屬性或類別私有方法)
+# print(me._MyEncapsulate__field)
+# me._MyEncapsulate__function()
