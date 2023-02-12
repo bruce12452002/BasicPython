@@ -5,6 +5,7 @@ name = input("請輸入您的名字：")
 print("歡迎 " + name + " 進入")  # 方法一
 print("歡迎 %s 進入" % name)  # 方法二
 print(f"歡迎 {name} 進入")  # 方法三
+print("歡迎 {name} 進入".format(name=name))  # 方法四
 
 card = input(name + "有幾張悠遊卡？")
 print(name + "有 %s 張悠遊卡" % card)
