@@ -2,6 +2,7 @@
 
 class Teacher:
     def __init__(self, num, name):  # __init__ 就是建構子，如果寫多個建構子，後者蓋前者
+        print("__init__")
         self.num = num
         self.name = name
 
@@ -44,9 +45,13 @@ class Teacher:
     def __del__(self):  # 物件被回收之前會自動調用
         print("__del__")
 
+    def __new__(cls, *args, **kwargs):
+        print("__new__")
+        return super().__new__(cls)
+
 
 t1 = Teacher(999, "孔子")
-print(t1)
+print(t1, type(t1))
 print(str(t1))
 t2 = Teacher(888, "孟子")
 print(t1 < t2)  # 類別裡要定義 __lt__ 或 __gt__ 才不會報錯，兩個都寫沒關係
@@ -57,3 +62,20 @@ print(t1 < t2)  # 類別裡要定義 __lt__ 或 __gt__ 才不會報錯，兩個�
 set().add(Teacher("999", "孔子"))
 print(bool(Teacher))  # 如果沒定義 __bool__，會調用 __len__，再沒有就是 True
 print(len(t1))
+
+print("============ __new__ 和 __int__ ============")
+# 會先執行 __new__
+# 如果 __new__ 回傳的是自己的實體才會再執行 __init__
+
+
+class Student:
+    def __init__(self):
+        print("__init__")
+
+    def __new__(cls, *args, **kwargs):
+        print("__new__")
+        # return super().__new__(cls)
+        return super().__new__(Teacher)
+
+
+s1 = Student()
