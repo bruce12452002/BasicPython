@@ -207,3 +207,20 @@ def conflicting(name, /, **kwds):  # 使用 / 解決衝突問題
 
 
 print(conflicting(1, **{'name': 2}))
+
+print("============ signature ============")
+import inspect
+
+
+def my_function(i: int, s: str) -> str:
+    return str(i) + s
+
+
+def xxx():
+    pass
+
+
+signature = inspect.signature(conflicting)
+print(str(signature))
+print(str(inspect.signature(my_function)))
+print(str(inspect.signature(xxx)))
