@@ -21,7 +21,7 @@ print((2 ** 3) ** 2)  # 64
 print(1 + 1.2, type(1 + 1.2))  # int 自動轉 float
 # print("a" + 1) # 型態不同，無法 +
 print("a" + "b")
-print("a" "b")
+print("a" "b")  # 不可是變數
 print(2 * "a" + 3 * "b")
 
 print("============ 型態轉換 ============")
