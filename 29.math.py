@@ -15,3 +15,6 @@ print(math.e)
 print(math.fmod(10, 3))  # 回傳浮點數
 print(math.pow(2, 5))  # 回傳浮點數
 print(math.sqrt(9))  # 根號，回傳浮點數
+print(math.ceil(4.456))  # 5
+print(math.floor(4.456))  # 4
+print(math.factorial(5))  # 5!
