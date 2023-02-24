@@ -1,5 +1,6 @@
 import numpy as np
 
+# https://numpy.org
 print(np.__version__)
 
 print("============ 零一維陣列 ============")
