@@ -25,7 +25,8 @@ print("a" "b")  # 不可是變數
 print(2 * "a" + 3 * "b")
 
 print("============ 型態轉換 ============")
-print(int(9.6), type(int(9.6)))
+print(int(9.6), type(int(9.6)))  # 第二個參數預設是 10，表示是 10 進位
+print(int('55', 16))  # 85
 # print(int("a"))  # 執行期錯誤
 print(float(8), type(float(8)))
 print(str(7788), type(str(7788)))
@@ -128,6 +129,7 @@ c1 = 1.5 - 0.5j  # 最後的 j 固定寫死，大小寫皆可
 c2 = complex(3, 4.5)
 print(c1.real, c1.imag)  # 1.5 實數 -0.5 虛數，imaginary
 print(c2.real, c2.imag)  # 3.0 實數 4.5 虛數
+complex('1+2j')  # 裡面可以放字串，但不能有空格
 
 print("============ 複數-四則運算 ============")
 # 複數沒有 / % **
