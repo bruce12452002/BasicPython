@@ -22,3 +22,6 @@ for i in list1:
 # 4.清空上一題 list1 的所有元素
 list1.clear()
 print(list1)
+
+# 5.刪除 ls 裡的元素 c
+ls = ['a', 7, False, 'c', 5.6]
