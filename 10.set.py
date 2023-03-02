@@ -3,7 +3,7 @@
 
 print("============ 初始化 set ============")
 my_set1 = {1, 3, 5, 7, 9, 7, 5, 3, 1}  # {} 表示 dict，不是空 set
-my_set2 = set("abc")  # 會拆開成三個元素  # set() 是空 set
+my_set2 = set("abc")  # 會拆開成三個元素； set() 是空 set； 這種方式初始化，只能是 0 或 1 個元素
 print(f"{my_set1}, {type(my_set1)}")
 print(f"{my_set2}, {type(my_set2)}")
 print(set({"abc": "ddd"}))  # 只會有 key，key 不會拆開
@@ -44,6 +44,7 @@ print(my_set2)
 
 print("============ 常用方法-修改 ============")
 my_set2.update({1: "xxx", "a": "bbb"})  # 將資料結構覆蓋到左邊，如果資料結構是 dict 只取 key
+print(my_set2)
 
 print("============ 常用方法-刪除 ============")
 my_set2.remove("a")  # 元素必需存在，否則報錯
