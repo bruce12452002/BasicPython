@@ -2,7 +2,7 @@
 # list、tuple、range 都叫 sequence
 
 print("============ 初始化 list 一 ============")
-a = list("abc")
+a = list("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
 # a = list(1)  # is not iterable
 print(f"{a}, {type(a)}")  # 會拆開成三個元素
 

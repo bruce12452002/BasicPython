@@ -7,7 +7,7 @@ print(f"{my_tuple1}, {type(my_tuple1)}")
 print(f"{my_tuple2}, {type(my_tuple2)}")
 
 print("============ 一個元素的 tuple ============")
-my_tuple3 = tuple("abc")
+my_tuple3 = tuple("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
 # my_tuple4 = (False)  # 這樣子還是 bool 型態
 my_tuple5 = (False,)  # 這樣子才是 tuple 型態
 print(f"{my_tuple3}, {type(my_tuple3)}")  # 會拆開成三個元素
