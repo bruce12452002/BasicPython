@@ -49,23 +49,28 @@ print("============ slice ============")
 # 基本上和 slice 一樣，看 13 章，這裡寫 slice 沒有的功能
 # slice 時的長度，以後面的為主，前面的會自動延伸
 two = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
-print(two[..., 1], two[..., 1:])
-print(two[1, ...], two[1:, ...])
+print(two[1, 1:3])  # 第一個元素的 1 和 2 元素
+print(two[0:2, 1:3])  # 第零和一元素的 1 和 2 元素
+print(two[..., 1], two[..., 1:])  # 元素的 1 元素； 元素的 1之後的元素
+print(two[1, ...], two[1:, ...])  # 第一個元素的所有元素； 第一個元素的之後的元素的所有元素
 print(two[1, 1:4])
-print(two[1:, 4:])  #
-print(two[0:, 4:])
+print(two[1:, 4:])
+print(two[0:, 4:])  # ... 等同 0:
 
-# print("============ 設定多維陣列 ============")
+print("============ 設定多維陣列 ============")
 # # 1 維以下，包括負的，都算1維
-# print(np.array([1, 2], ndmin=1))
-# print(np.array([1, 2], ndmin=2))
-# print(np.array([1, 2], ndmin=3))
-# xxx = np.array([1, 2], ndmin=2)
-#
-# a = np.arange(5)  # 0~4
-# print(a, type(a))
-# print(np.sqrt(a))
-#
-# # arrange 用法和 range 一樣
-# print(np.arange(1, 5))  # 1~4
-# print(np.arange(1, 5, 2))  # 1 3
+print(np.array([1, 2], ndmin=1))
+print(np.array([1, 2], ndmin=2))
+print(np.array([1, 2], ndmin=3))
+
+xxx = np.array([1, 2], ndmin=3)
+print(xxx[0], xxx[0][0], xxx[0][0][0])
+
+print("============ arange ============")
+a = np.arange(5)  # 0~4
+print(a, type(a))
+print(np.sqrt(a))
+
+# arrange 用法和 range 一樣
+print(np.arange(1, 5))  # 1~4
+print(np.arange(1, 5, 2))  # 1 3
