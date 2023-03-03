@@ -23,7 +23,7 @@ class Animal:
 
 
 print("============ 類別. ============")
-print(Animal.)  # 查看註解內容，使用 help(Animal) 也可以
+print(Animal.__doc__)  # 查看註解內容，使用 help(Animal) 也可以
 print(Animal.name)  # 所有實體都會影響
 print(Animal.my_function1)
 print(Animal.my_function1(Animal()))
