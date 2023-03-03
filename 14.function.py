@@ -21,6 +21,8 @@ def function_name(param1, param2):
 print(function_name(9, 1))
 print(type(function_name(9, 1)))
 
+# 同名方法，後者蓋前者
+
 print("============ 宣告方法，有無回傳值 ============")
 
 
