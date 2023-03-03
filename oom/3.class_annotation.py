@@ -12,7 +12,7 @@ class Animal:
 
     @staticmethod  # @開頭的語法在 python 裡，叫裝飾器 decorator
     def my_static_method():
-        print("static method")
+        print(f"static method, name={Animal.name}")
 
     @classmethod
     def my_class_method(cls):  # cls 是一定要的，且一定要在第一個
@@ -29,12 +29,12 @@ print("============ 調用類別方法 ============")
 Animal.my_class_method()
 a1.my_class_method()
 
-# 類別.屬性影響 @classmethod
+print("============ 類別.屬性 ============")
 Animal.name = "monkey"
 Animal.my_class_method()
 a1.my_class_method()
 
-# 實體屬性和 @classmethod 互不影響
+print("============ 實體屬性和類別屬性互不影響 ============")
 a2 = Animal()
 a2.name = "dog"
 a2.my_class_method()  # 實體調用 @classmethod 也不會變 dog
