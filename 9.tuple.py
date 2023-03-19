@@ -18,6 +18,9 @@ print(tuple({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 print("============ 多個元素的 tuple ============")
 my_tuple6 = "a", 1, True
 my_tuple7 = ("a", 1, True)
+my_tuple6a = ["a"], [1], [True]
+my_tuple7a = [["a"], [1], [True]]
+print(type(my_tuple6a), type(my_tuple7a))  # tuple list
 
 # my_tuple8 = tuple("a", 1, True)  # tuple() 多了 tuple 關鍵字，這時裡面只能是 0 或 1 個元素
 print(f"{my_tuple6}, {type(my_tuple6)}")
