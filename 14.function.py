@@ -210,6 +210,22 @@ def conflicting(name, /, **kwds):  # 使用 / 解決衝突問題
 
 print(conflicting(1, **{'name': 2}))
 
+print("============ recursive ============")
+
+
+# 方法調用自己為 recursive (遞迴)
+
+
+def my_recursive(i: int, count: int) -> int:
+    if i <= 0:
+        return count
+    count += i
+    i -= 1
+    return my_recursive(i, count)  # 不寫 return 為 None
+
+
+print(my_recursive(100, 0))
+
 print("============ signature ============")
 import inspect
 
