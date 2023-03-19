@@ -66,3 +66,14 @@ while i < 10:
 else:
     print("finish")  # 如果被 break 或拋出例外，就沒執行了
 print()
+
+print("============ 模擬 do-while ============")
+# 有些程式語言有 do while 的迴圈，功能是至少會執行一次迴圈
+# 只要將判斷寫在 while 內部就可以完成這個功能
+
+i = 0
+while True:
+    print("我執行了")
+    if i == 0:
+        break
+    i -= 1
