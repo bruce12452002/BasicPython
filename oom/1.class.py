@@ -1,5 +1,7 @@
 # 定義類別，屬性:屬性類型=預設值，屬性類型可不寫，寫不寫值都可以亂給，只是給使用的人參考，比較不會有例外發生
-# self 名稱可亂打，但不建議
+# self 名稱可亂打，但不建議，表示實體自己
+# java 的靜態屬性相當於 python 的類別屬性
+
 from pprint import pprint
 
 
@@ -63,7 +65,8 @@ print(Xxx.__name__)  # 內鍵的類別變數
 print(Xxx.abc)
 print(Xxx().abc)
 
-Xxx.xyz = 100  # 可以動態賦值，實體也能取得到
+Xxx.xyz = 100  # 可以動態賦值
+print(Xxx().xyz)  # 實體也能取得到，但自己增加的屬性是實體屬性，只會是實體自己擁有，如 a = Xxx() a.xyz，表示 a 這個實體的 xyz 只有 a 擁有
 del Xxx.xyz
 
 print(getattr(Xxx, "abc"))  # 如果取不到就報錯
@@ -71,4 +74,4 @@ print(getattr(Xxx, "def", "321"))  # 如果取到就用，取不到就給最後�
 setattr(Xxx, "abc", 999)
 delattr(Xxx, "abc")
 
-pprint(Xxx.__dict__)  # pprint 可格式化，容易看
+pprint(Xxx.__dict__)  # pprint 將結果格式化，容易看

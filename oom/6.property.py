@@ -1,6 +1,7 @@
 # 封裝的概念
-# 加了 @property 的方法，無法被賦值和刪除
+# 加了 @property 的方法，無法被賦值和刪除，也只能有 self 參數
 # 可視需要加上 @xxx.setter 和 @xxx.deleter
+# @xxx.setter 只能有兩個參數， self 參數和自定義參數
 
 class Animal:
     @property
@@ -23,7 +24,7 @@ class Animal2:
     def name(self) -> str:
         return self.__n
 
-    @name.setter  # name.的字串名稱要和 @property 的方法名稱一樣
+    @name.setter  # 方法名稱、name.的字串名稱、@property 的方法名稱都要一樣
     def name(self, value):
         self.__n = value
 
