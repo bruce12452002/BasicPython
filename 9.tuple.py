@@ -36,6 +36,7 @@ print(my_tuple8.index("hehe"))  # 找不到會報錯
 print(my_tuple8.count(1.1))  # 找不到為 0
 print(my_tuple8[0])
 print(my_tuple8[-2])
+print("haha" in my_tuple8)
 
 print("============ tuple 可嵌套 ============")
 my_tuple_tuple = ((1, 2, 3), ("a", "b"), [True, False])
