@@ -108,4 +108,9 @@ for k, v in my_dict4.items():
     print(k, v, end=" ", sep="=")
 print()
 
+for kv in my_dict4.items():
+    print(kv)
+    print(kv[0], kv[1], sep="=")
+print()
+
 print(len(my_dict4))

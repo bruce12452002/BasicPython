@@ -109,3 +109,12 @@ print(f"原本兩個是 {data[0][7]}, {deep_clone[0][7]}")
 deep_clone[0][7] = {"k2": 777}
 print(f"修改後是 {data[0][7]}, {deep_clone[0][7]}")
 print(deep_clone[0][7] is data[0][7], deep_clone is data)
+
+print("============ dict ============")
+# dict 的 value，仍然是淺複製
+my_dict = {"xxx": [1, 2, 3]}
+clone_dict = my_dict.copy()
+clone_dict.setdefault("a")
+print(my_dict, clone_dict)
+my_dict.get("xxx").append(4)
+print(my_dict, clone_dict)
