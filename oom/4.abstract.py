@@ -1,12 +1,16 @@
 import abc
 
+"""
+抽象類別裡，如果有抽象方法就不可被實體化
+"""
+
 
 class Animal(abc.ABC):
     name: str = None
 
     @abc.abstractmethod
     def abs_method(self):
-        print("abs_method")  # 調用就會發生錯誤，這行不會印
+        print("abs_method")  # 調用就會發生錯誤，這行不會印，所以一般都寫 pass
 
     @staticmethod
     def my_static_method():

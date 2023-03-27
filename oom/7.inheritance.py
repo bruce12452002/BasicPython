@@ -52,11 +52,17 @@ print("============ __init__ ============")
 
 
 class GrandPapa:
+    a = 4
+
     def __init__(self):
         self.name = "xxx"
 
+    def yeah(self):
+        return self.a
+
 
 class Papa(GrandPapa):
+    a = "abc"
     """
     沒有寫 __init__ 時，會自動幫我們調用父類別的 __init__，但自己寫了 __init__ 之後，要自己顯示調用才行
     """
@@ -75,3 +81,14 @@ print(isinstance(GrandPapa(), Papa))  # False
 print(issubclass(Papa, Papa))  # True，自己也算是自己的子類
 print(issubclass(Papa, GrandPapa))  # True
 print(issubclass(GrandPapa, Papa))  # False
+
+print("============ 方法參數是 class ============")
+
+
+def get_a(g: GrandPapa):  # 參數是 GrandPapa，也可傳 GrandPapa 的子類別
+    print(g.a)
+    print(g.yeah())
+
+
+get_a(papa)
+get_a(GrandPapa())

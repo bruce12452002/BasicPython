@@ -1,3 +1,6 @@
+# 屬寫屬性時，值可以是任意類型
+# 覆寫方法時，參數都要一模一樣才行
+
 class GrandPapa:
     money = 100_0000
 
@@ -50,5 +53,3 @@ print(grandPapa.money)
 
 me.use_papa()
 me.use_grand_papa()
-
-
