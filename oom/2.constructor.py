@@ -6,7 +6,7 @@ class Teacher:
     # num: int = None
     # name: str = None
 
-    def __init__(self, num, name):  # __init__ 就是建構子，如果寫多個建構子，後者蓋前者
+    def __init__(self, num, name):  # __init__ 就是建構子，如果寫多個建構子，後者蓋前者，不寫也有一個預設的 __init__(self)
         self.num = num
         self.name = name
 

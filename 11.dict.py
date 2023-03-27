@@ -9,7 +9,7 @@ my_dict3 = dict()  # 裡面的元素不會拆開，用法和 my_dict1 一樣
 print(f"{my_dict1}, {type(my_dict1)}")
 print(f"{my_dict2}, {type(my_dict2)}")
 print(f"{my_dict3}, {type(my_dict3)}")
-print(my_dict1["k1"])
+print(my_dict1["k1"], my_dict1.get("k1"))  # 用[]取值，如 key 沒有會報錯
 
 print("============ 初始化 dict 二 ============")
 d1 = dict(a="apple", b="banana", c="cat")
@@ -75,6 +75,7 @@ print(f"{all_key}, {type(all_key)}")
 print(f"{all_values}, {type(all_values)}")
 
 print(my_dict4.get("k1"), my_dict4.get("k3"), my_dict4.get("k3", 50))  # 取得對應的值，沒有就回傳 None 或第二個參數
+print("a" in my_dict4)  # 判斷 key 是否存在
 
 print("============ 常用方法-刪除 ============")
 print(my_dict4.pop("k3"))  # 回傳並刪除
@@ -105,6 +106,11 @@ print()
 
 for k, v in my_dict4.items():
     print(k, v, end=" ", sep="=")
+print()
+
+for kv in my_dict4.items():
+    print(kv)
+    print(kv[0], kv[1], sep="=")
 print()
 
 print(len(my_dict4))

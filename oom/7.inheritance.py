@@ -47,3 +47,31 @@ sister = Sister()
 print(sister.get_house())
 brother = Brother()
 print(brother.get_house())
+
+print("============ __init__ ============")
+
+
+class GrandPapa:
+    def __init__(self):
+        self.name = "xxx"
+
+
+class Papa(GrandPapa):
+    """
+    沒有寫 __init__ 時，會自動幫我們調用父類別的 __init__，但自己寫了 __init__ 之後，要自己顯示調用才行
+    """
+
+    # def __init__(self):
+    #     super().__init__()  # super 有圓括號
+    #     self.address = "ooo"
+
+
+papa = Papa()
+print(papa.name)
+print(isinstance(papa, Papa))  # True，自己是自己的實體
+print(isinstance(papa, GrandPapa))  # True
+print(isinstance(GrandPapa(), Papa))  # False
+
+print(issubclass(Papa, Papa))  # True，自己也算是自己的子類
+print(issubclass(Papa, GrandPapa))  # True
+print(issubclass(GrandPapa, Papa))  # False

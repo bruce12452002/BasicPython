@@ -1,4 +1,4 @@
-# @staticmethod： 沒有 cls 和 self 屬性，「不可」直接調用屬性
+# @staticmethod： 沒有 cls 和 self 屬性，「不可」直接調用屬性，和寫在全域方法一樣，只不過定義在 class 裡，但會報錯，所以加了這個裝飾器
 # @classmethod：第一個參數一定要是 cls(可亂打，但不建議)，表示此類別，「可」直接調用屬性；會被類別.屬性影響，不會被實體影響
 
 class Animal:

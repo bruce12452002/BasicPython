@@ -37,6 +37,8 @@ myList4 = ["o", "x", "x", "o", "o", "x"]
 print(myList4.count("x"))
 print(len(myList4))
 
+print("x" in myList4)
+
 print("============ 常用方法-修改 ============")
 myList2[1] = 999
 print(myList2)

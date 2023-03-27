@@ -6,11 +6,17 @@ class Teacher:
         self.num = num
         self.name = name
 
-    def __str__(self):  # 印物件實體或 str()時調用
-        return f"name={self.num}, name={self.name}"
+    """
+    __str__ 和 __repr__ 類似 java 的 toString()
+    __str__ 給用戶看，str() 會調用
+    __repr__ 給開發看，repr() 會調用
+    印物件實體時，先調用 __str__，沒有就調用 __repr__； 都沒有印記憶體位址
+    """
+    def __str__(self):
+        return f"num={self.num}, name={self.name}"
 
-    def __repr__(self) -> str:  # repr()
-        return f"name={self.name}, name={self.num}"
+    def __repr__(self) -> str:
+        return f"name={self.name}, num={self.num}"
 
     def __gt__(self, other):
         return self.num > other.num
@@ -21,7 +27,7 @@ class Teacher:
     # def __ge__(self, other):
     #     return self.num >= other.num
 
-    def __eq__(self, other):
+    def __eq__(self, other):  # is 比較記憶體位址； == 會調用 __eq__
         print("__eq__")
         if not isinstance(other, Teacher):
             return False
@@ -34,6 +40,9 @@ class Teacher:
         print("__hash__")
         return hash(self.num + self.name)
 
+    """
+    bool() 時，先調用 __bool__，沒有就調用__len__
+    """
     def __bool__(self):
         print("__bool__")
         return self.num > 5

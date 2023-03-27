@@ -1,6 +1,7 @@
 class MyEncapsulate:
     __field = 1
     field = 2
+    _field = 3
 
     def __function(self):
         print("封裝方法")

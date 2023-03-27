@@ -238,7 +238,7 @@ def xxx():
     pass
 
 
-signature = inspect.signature(conflicting)
-print(str(signature))
-print(str(inspect.signature(my_function)))
-print(str(inspect.signature(xxx)))
+signature = inspect.signature(conflicting)  # 取得參數長什麼樣子
+print(str(signature))  # (name, /, **kwds)
+print(str(inspect.signature(my_function)))  # (i: int, s: str) -> str
+print(str(inspect.signature(xxx)))  # ()
