@@ -47,10 +47,10 @@ print(sango["關羽"]["攻擊力"])
 
 print("============ 常用方法-增加 ============")
 print(my_dict3)
-my_dict3.setdefault("a", 1)  # 如果 key 沒有才新增
-my_dict3.setdefault("a", 100)
+my_dict3.setdefault("a", 1)  # 如果 key 沒有才新增, 這行還沒有1，所以會新增進去，且回傳值為 1
+kk = my_dict3.setdefault("a", 100)  # 因為已經有 a 了，所以不會新增成功，回傳值為目前已有的值 1
 my_dict3.setdefault("b")  # 只有一個參數時，value 為 None
-print(my_dict3)
+print(my_dict3, kk)
 
 # 從其他資料結構轉成 dict，如果有第二個參數為 key 的 value
 print(dict.fromkeys(["a", "b"]))
