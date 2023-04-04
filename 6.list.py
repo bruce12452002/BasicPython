@@ -44,6 +44,7 @@ myList2[1] = 999
 print(myList2)
 myList2[-1] = None
 print(myList2)
+# myList2.sort()  # 由小到大排序，會修改原本的 list，但要注意，內容必需是同樣的型態
 
 print("============ 常用方法-增加 ============")
 myList2.append("end")  # 在最後增加元素
