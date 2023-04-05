@@ -48,8 +48,8 @@ students[1::2] # 取出成績
 # lowest_index = students.index(score_list[0])
 # highest = len(students) // 2 - 1  # 最高分在最右邊
 # highest_index = students.index(score_list[highest])
-# print("%s:%s" % (students[lowest_index - 1], score_list[0]))
-# print("%s:%s" % (students[highest_index - 1], score_list[highest]))
+# print("%s:%d" % (students[lowest_index - 1], score_list[0]))
+# print("%s:%d" % (students[highest_index - 1], score_list[highest]))
 
 """
 No4. 請設計一個串列，students，分別於index為0,2,4...處存放姓名，
@@ -66,12 +66,12 @@ score_list = students[1::2]
 score_list.sort()  # 72 88 90 92
 
 for i in score_list:
-    lowest_index = students.index(i)
-    print("%s:%s" % (students[lowest_index - 1], i))
+    index = students.index(i)
+    print("%s:%d" % (students[index - 1], i))
 
 for i in score_list[::-1]:
-    lowest_index = students.index(i)
-    print("%s:%s" % (students[lowest_index - 1], i))
+    index = students.index(i)
+    print("%s:%d" % (students[index - 1], i))
 
 """
 No5. 請設計一個串列，students，分別於index為0,2,4...處存放姓名，
@@ -84,9 +84,9 @@ students=[....] # index為0,2,4...處存放姓名。index為1,3,5...處存放成
 提示:index函式、slice、sort和reverse函式。
 """
 # for i in score_list:
-#     lowest_index = students.index(i)
-#     print("%s:%s" % (students[lowest_index - 1], i))
+#     index = students.index(i)
+#     print("%s:%d" % (students[index - 1], i))
 # score_list.reverse()
 # for i in score_list:
-#     lowest_index = students.index(i)
-#     print("%s:%s" % (students[lowest_index - 1], i))
+#     index = students.index(i)
+#     print("%s:%d" % (students[index - 1], i))
