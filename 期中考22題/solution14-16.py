@@ -8,7 +8,10 @@ No14.
 姓名為Bill，其成績為88。
 提示:使用while迴圈
 """
-
+# i = 0
+# while i < len(names):
+#     print("%s:%d" % (names[i], scores[i]))
+#     i += 1
 
 """
 No15. 
@@ -19,7 +22,18 @@ No15.
 姓名為Bill，其成績為88。
 提示:使用while迴圈、sorted和reversed方法。
 """
-
+# sorted_scores = sorted(scores)
+# i = 0
+# while i < len(names):
+#     index = scores.index(sorted_scores[i])
+#     print("%s:%d" % (names[index], sorted_scores[i]))
+#     i += 1
+# sorted_scores.reverse()
+# i = 0
+# while i < len(names):
+#     index = scores.index(sorted_scores[i])
+#     print("%s:%d" % (names[index], sorted_scores[i]))
+#     i += 1
 
 """
 No16. 
@@ -30,3 +44,14 @@ No16.
 姓名為Bill，其成績為88。
 提示:使用while迴圈，使用sorted方法
 """
+sorted_scores = sorted(scores)
+i = 0
+while i < len(names):
+    index = scores.index(sorted_scores[i])
+    print("%s:%d" % (names[index], sorted_scores[i]))
+    i += 1
+
+while i >= 0:
+    i -= 1
+    index = scores.index(sorted_scores[i])
+    print("%s:%d" % (names[index], sorted_scores[i]))

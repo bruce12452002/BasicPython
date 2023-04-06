@@ -4,23 +4,36 @@ No19.
 分別存放使用者輸入的姓名，java成績和 python成績。直到輸入姓名為空為止。
 並輸出使用者輸入的姓名，java成績和python成績，
 其格式為，姓名:java成績:python成績。
-輸入的姓名和成績，姓名為Lendy，其java成績成績為90，python成績成績為88、
-姓名為Mary，其java成績成績為72，python成績成績為90、姓名為Bill，
+輸入的姓名和成績，姓名為 Lendy，其java成績成績為90，python成績成績為88、
+姓名為 Mary，其java成績成績為72，python成績成績為90、姓名為 Bill，
 其java成績成績為88，python成績成績為78。
 提示:使用while迴圈
 """
+# names = ['Lendy', 'Mary', 'Bill']
+# java_scores = [90, 72, 88]
+# python_scores = [88, 90, 78]
+# i = 0
+# while i < len(names):
+#     print(f"{names[i]}:{java_scores[i]}:{python_scores[i]}")
+#     i += 1
 
 """
 No20. 
 請使用辭典搭配串列students，透過辭典存放使用者輸入的姓名，
 java成績和 python成績。直到輸入姓名為空為止。並輸出使用者輸入的姓名，
 java成績和 python成績，其格式為，姓名:java成績:python成績。
-輸入的姓名和成績，姓名為Lendy，其java成績成績為90，python成績成績為88、
-姓名為Mary，其java成績成績為72，python成績成績為90、姓名為Bill，
+輸入的姓名和成績，姓名為 Lendy，其java成績成績為90，python成績成績為88、
+姓名為 Mary，其java成績成績為72，python成績成績為90、姓名為 Bill，
 其java成績成績為88，python成績成績為78。
 提示:使用while迴圈
-
 """
+students = [{'Lendy': [90, 88]}, {'Mary': [72, 90]}, {'Bill': [88, 78]}]
+i = 0
+while i < len(students):
+    for k, v in students[i].items():
+        print(f"{k}:{v[0]}:{v[1]}")
+    i += 1
+
 
 """
 No21. 

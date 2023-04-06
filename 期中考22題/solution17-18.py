@@ -14,7 +14,19 @@ n=['Lendy','Mary','Bill','John']
 11. 請透過間距為-1的方法，用正向index搭配負向index，取出'Bill'到'Mary'
 12. 請透過間距為-1的方法，用負向index搭配正向index，取出'Bill'到'Mary'
 """
-
+n = ['Lendy', 'Mary', 'Bill', 'John']
+# print("1.", n[1])
+# print("2.", n[-3])
+# print("3.", n[1:4])
+# print("4.", n[1:])
+# print("5.", n[-3::1])
+# print("6.", n[-3:])
+# print("7.", n[::])
+# print("8.", n[::-1])
+# print("9.", n[1:-1:1])
+# print("10.", n[-3:3:1])
+# print("11.", n[2:0:-1])
+# print("12.", n[-2:-4:-1])
 
 """
 No18.
@@ -32,3 +44,16 @@ n='LMBJ'
 11. 請透過間距為-1的方法，用正向index搭配負向index，取出'B'到'M'
 12. 請透過間距為-1的方法，用負向index搭配正向index，取出'B'到'M'
 """
+n = 'LMBJ'
+print("1.", n[1])
+print("2.", n[-3])
+print("3.", n[1:4])
+print("4.", n[1:])
+print("5.", n[-3::1])
+print("6.", n[-3:])
+print("7.", n[::])
+print("8.", n[::-1])
+print("9.", n[1:-1:1])
+print("10.", n[-3:3:1])
+print("11.", n[2:0:-1])
+print("12.", n[-2:-4:-1])
