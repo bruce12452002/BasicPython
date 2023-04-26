@@ -1,7 +1,7 @@
 class MyEncapsulate:
-    __field = 1
+    __field = 1  # 會自動轉成 _類別名稱__欄位名稱，也就是 _MyEncapsulate__field
     field = 2
-    _field = 3
+    _field = 3  # 已經是 private，但 python 沒有強制讓實體取不到
 
     def __function(self):
         print("封裝方法")
