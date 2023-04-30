@@ -33,7 +33,7 @@ if operator.gt(apple, 25):  # apple > 25
     print("too expensive")
     print("too expensive")
 print("非 if 區塊")
-
+if 10 > 5: print('if 內容只有一行時，可以全部只寫一行')
 print("============ if 二 ============")
 if apple > 50:
     print("too expensive")
