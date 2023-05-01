@@ -14,6 +14,8 @@ print(os.path.isdir(p))
 # mode： r(read) w(write) a(append) x(execute) t(text) b(binary) +(read and write) 預設為rt
 # 常用的為 r w a r+ w+ a+
 # r 可讀不可寫； w 可寫不可讀，寫的時候會覆蓋之前的； a 可寫不可讀，寫的時候從最後增加
+# open("test.txt", encoding="UTF-8")，mode 不設定預設是 rt，也就是讀取文字檔
+# 沒有什麼 rw，如果寫支援讀寫，可用 +，19b會說明
 
 print("============ 讀檔一 ============")
 read_file = open("test.txt", "r", encoding="UTF-8")
