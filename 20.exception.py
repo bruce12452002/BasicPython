@@ -38,22 +38,39 @@ else:
     print("finish")  # 沒例外才會執行
 
 print("============ 都會執行的 finally ============")
-try:
-    print("xx")
-    # 1 / 0
-except ZeroDivisionError as ex:
-    print(ex)
-else:
-    print("finish")  # 沒例外才會執行
-finally:
-    print("不管怎樣都會執行")
-
-print("============ return 和 finally ============")
 
 
-# 有了 return，else 將不起作用
-# 如果沒例外：finally 執行完，然後 return
-# 如果有例外：except -> finally，然後 return None
+def test_try():
+    try:
+        print("xx")
+        # 1 / 0
+        # return 999  # return 之後會先執行 finally
+    except ZeroDivisionError as ex:
+        print(ex)
+    else:
+        print("finish")  # 沒例外才會執行
+    finally:
+        print("不管怎樣都會執行")
+
+
+print(test_try())
+
+print("============ return 和 finally 注意事項 ============")
+"""
+有了 return，else 將不起作用
+如果沒例外：finally 執行完，然後 return
+如果有例外：except -> finally，然後 return None
+
+五種 try 的寫法，只有 except 可多個
+try except
+try except finally
+try finally
+
+最後兩種有 else，else 只能在有 except 時，才能寫 
+try except else
+try except else finally
+"""
+
 
 def test() -> int:
     try:
@@ -91,8 +108,8 @@ def f():
 try:
     f()
 except* OSError as e:
-    print("OSErrors OSErrors")
+    print(f"OSErrors => {e.message}")
 except* SystemError as e:
-    print("SystemErrors SystemErrors")
-# except* Exception as e:
-#     print(e)
+    print(f"SystemErrors => {e.message}")
+except* Exception as e:
+    print(e.message)
