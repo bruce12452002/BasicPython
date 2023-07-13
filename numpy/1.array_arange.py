@@ -4,7 +4,7 @@ import numpy as np
 print(np.__version__)
 
 print("============ 零一維陣列 ============")
-arr0 = np.array("aa")  # 一個元素的陣列，多個要用 list tuple set
+arr0 = np.array("aa")  # 一個元素的陣列，多個元素要用 list tuple set
 print(arr0, type(arr0))
 
 arr1 = np.array({1, 2, 3, 4, 5})
@@ -19,6 +19,15 @@ print(arr3, type(arr3))
 # 檢查幾維陣列，一個元素和 set 算 0 維，set 只能用在 0 維
 print(arr0.ndim, arr1.ndim, arr2.ndim, arr3.ndim)
 
+# 顯示陣列是幾乘幾的
+print(arr0.shape, arr1.shape, arr2.shape, arr3.shape)
+
+# 檢查陣列裡有幾個元素
+print(arr0.size, arr1.size, arr2.size, arr3.size)
+
+# 元素的型態是什
+print(arr0.dtype, arr1.dtype, arr2.dtype, arr3.dtype)
+
 print("============ 零一維陣列取值 ============")
 # 零維不可用方括號，會報錯
 # 方括號支援負的
@@ -31,10 +40,17 @@ print("============ 多維陣列 ============")
 # 長寬高必需一樣才行
 arr_two = np.array([[1, 2], [3, 4]])
 print(arr_two, type(arr_two))
-arr_three = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], ["a", True, 1]]])
+arr_three = np.array([
+    [
+        [1, 2, 3], [4, 5, 6]
+    ],
+    [
+        [7, 8, 9], ["a", True, 1]
+     ]
+])
 print(arr_three, type(arr_three))
-print(arr_two.ndim)
-print(arr_three.ndim)
+print(arr_two.ndim, arr_two.shape, arr_two.size, arr_two.dtype)
+print(arr_three.ndim, arr_three.shape, arr_three.size, arr_three.dtype)
 
 print("============ 多維陣列取值 ============")
 # [0][1] 和 [0, 1] 是一樣的
