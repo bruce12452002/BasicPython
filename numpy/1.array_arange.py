@@ -61,6 +61,30 @@ print()
 print(arr_three, arr_three[0], arr_three[0, 1], arr_three[0, 1, 1], sep="--")
 print()
 
+print("============ 用陣列當索引取值 ============")
+arr_index = np.array(['a', 'b', 'c', 'd'])
+print(arr_index[[0, 2, 3]])  # a c d
+
+arr2_index = np.array([[3, 2], [1, 0]])
+print(arr_index[arr2_index])  # [['d' 'c'] ['b' 'a']]
+
+arr = np.array([56, 78, 20, 99, 1, 88])
+print(arr.argsort(), arr.argsort()[-2:])  # 轉成由小到大的索引，但沒排序，-2表示取最大的兩個數的索引
+print(arr[arr.argsort()[-2:]])  # [88 99]
+
+arr2 = np.array([['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']])
+print(arr2[[0, 2], :])  # 取兩列，第二個參數如果是「:」，可省略
+print(arr2[:, [0, 2]])  # 取兩欄
+print(arr2[[1, 1], [0, 2]])  # ['d' 'f']，取(1, 0) 和 (1, 2) 的值
+
+print("============ 用 bool 當索引取值 ============")
+a = np.arange(10)
+print(a[a % 2 == 0])
+a[a % 2 == 0] = 0
+a[a % 2 == 1] = 1
+print(a)
+
+
 print("============ slice ============")
 # 基本上和 slice 一樣，看 13 章，這裡寫 slice 沒有的功能
 # slice 時的長度，以後面的為主，前面的會自動延伸
