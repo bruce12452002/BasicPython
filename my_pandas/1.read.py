@@ -1,5 +1,7 @@
 import pandas as pd
 
+# pandas 是使用陣列的功能
+
 print("============ read csv ============")
 c = pd.read_csv("./csv_file.csv")
 print(c.head())
