@@ -13,13 +13,20 @@ print(c.dtypes)  # 每一欄的資料類型
 print("============ read txt ============")
 # header=None 表示將標題變成內容；names 表示自訂標籤名稱，沒指定是左到右的索引
 # 有 names 時，header 會自動 None
-t = pd.read_csv("./txt_file.txt", sep="--", header=None, names=['xxx', 'ooo', 'qoo'])
+t = pd.read_csv("./txt_file.txt", sep="--", header=None, names=['xxx', 'ooo', 'qoo'], engine='python')
 print(t.head())
 
 print("============ read other ============")
 # pd.read_excel("")
 
-import pymysql as mysql
+# import pymysql as mysql
+#
+# conn = mysql.connect(host='127.0.0.1', user='root', password='123456', database='my_db')
+# pd.read_sql("select * from table", con=conn)
 
-conn = mysql.connect(host='127.0.0.1', user='root', password='123456', database='my_db', charset='utf-8')
-pd.read_sql("select * from table", con=conn)
+print("============ set_index ============")
+print(c.head())
+print(c.index)
+c.set_index("姓名", inplace=True)
+print(c.index)
+print(c.head())
