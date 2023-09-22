@@ -9,7 +9,7 @@ print(f"{my_tuple2}, {type(my_tuple2)}")
 print("============ 一個元素的 tuple ============")
 my_tuple3 = tuple("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
 # my_tuple4 = (False)  # 這樣子還是 bool 型態
-my_tuple5 = (False,)  # 這樣子才是 tuple 型態
+my_tuple5 = (False,)  # 這樣子才是 tuple 型態，可不用圓括號
 print(f"{my_tuple3}, {type(my_tuple3)}")  # 會拆開成三個元素
 # print(f"{my_tuple4}, {type(my_tuple4)}")
 print(f"{my_tuple5}, {type(my_tuple5)}")
@@ -32,7 +32,10 @@ print(f"my_tuple7 = {my_tuple7}, {type(my_tuple7)}")
 
 print("============ 常用方法 ============")
 my_tuple8 = 1.1, False, "hehe", 1.1, "haha", 1.1
-print(my_tuple8.index("hehe"))  # 找不到會報錯
+print(my_tuple8.index("hehe"))  # 給 key 回傳索引值，找不到會報錯
+# 要注意 key 是 bool 時，可以找到 0、0.0、False、1、1.0、True
+# 0 表示 False；1 表示 True，會從最左邊開始找，找到就會回傳索引值
+
 print(my_tuple8.count(1.1))  # 找不到為 0
 print(my_tuple8[0])
 print(my_tuple8[-2])
