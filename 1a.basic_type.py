@@ -40,11 +40,11 @@ print("============ 宣告變數 ============")
 # https://docs.python.org/zh-tw/3/reference/lexical_analysis.html#identifiers
 # = += -= *= /= //= %= **=，python 沒有 ++ -- 語法
 a = 2
-a += 5  # a = a + 5
+a *= 5  # a = a + 5
 print(a)
 x, y, z = 1, 2.3, "ooo"
 print(x, y, z)
-# print = 3
+print = 3
 # print(print)
 del a  # 刪除 a 變數
 # print(a)
@@ -94,7 +94,7 @@ my_string = "abc apple"
 print(my_string.upper())
 print(my_string.lower())
 print(my_string.capitalize())
-print(my_string.title(), my_string.istitle())
+print(my_string.title(), my_string.istitle()) # 多個 capitalize，如果是就是 True
 print(my_string)
 
 print(my_string[-1])
@@ -116,7 +116,7 @@ print(my_string2.strip())  # 全形空格也能清除
 print(my_string2.strip(""))  # 什麼都沒發生，所以不要用空字串來清除
 
 my_string3 = "abaac  appleba"
-print(my_string3.strip("ab"))  # 整個字串裡，有 a 或 b 都會清除
+print(my_string3.strip("ab"))  # 整個字串裡，最前和最後有 a 或 b 都會清除
 print(my_string3.removeprefix("ab"))  # 字串開頭是 ab 會刪除
 print(my_string3.removesuffix("ab"))  # 字串結尾是 ab 會刪除
 
