@@ -44,9 +44,9 @@ a *= 5  # a = a + 5
 print(a)
 x, y, z = 1, 2.3, "ooo"
 print(x, y, z)
-print = 3
+# print = 3
 # print(print)
-del a  # 刪除 a 變數
+# del a  # 刪除 a 變數
 # print(a)
 
 print("============ 宣告字串的四種方式 ============")
