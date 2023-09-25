@@ -1,5 +1,5 @@
 print("============ 字串格式化一 ============")
-# %d %s %f 為 digital(數字) string(字串) float(浮點數)
+# %d %s %f 為 digital(數字) string(字串) float(浮點數), %d 等同 %i
 # 格式為 "%s" % (取代 %s 的字串)，如果只有一個要取代，圓括可不寫
 # %s 什麼都可以接收；%d 和 %f 只能傳數字，否則報錯
 # %d 給浮點數會無條件括去小數；%f 給整數會自動將後面 .0
@@ -42,8 +42,8 @@ print("============ 字串格式化三 ============")
 # 參考 https://docs.python.org/zh-tw/3/library/stdtypes.html#str.format
 print('1.{1} and {0} and {0}'.format('aaa', 'bbb'))  # 手動指定第幾個參數
 
-# 依參數名稱賦值，k-v 一律放在最後面，不可穿插在中間
-print('2.{fa} and {fb} and {0} or {fa}'.format("ccc", fa='aaa', fb='bbb'))  # k=v 只能放在最後面
+# 依參數名稱賦值，k=v 一律放在最後面，不可穿插在中間
+print('2.{fa} and {fb} and {0} or {fa}'.format("ccc", fa='aaa', fb='bbb'))
 
 # 參數自動依照順序
 print('3.{} and {} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和花括號相等
