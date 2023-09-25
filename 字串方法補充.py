@@ -65,8 +65,28 @@ print(a.swapcase())
 
 '''
     max、min
-    以 ASCII 的數字大小來回傳
+    以 ASCII 的數字大小來比較
 '''
 a = 'abcABC'
 print(max(a))
 print(min(a))
+
+'''
+    isXxx 是否是 xxx，回傳布林值
+    
+'''
+print("123１２３".isdigit())
+print(b"9".isdigit())  # bytes 型態，isdecimal 和 isnumeric 會直接報錯
+print("123１２３".isdecimal())
+print("123壹貳參贰叁一二三１２３ⅠⅱⅲⅣ".isnumeric())
+
+print("123F".isalnum())  # [0-9][A-Z][a-z]
+print("Fghi".isalpha())  # [A-Z][a-z]
+print("Zz".isascii())
+
+print("abc@".islower())  # 非英文字不影響判斷
+print("ABC#".isupper())  # 非英文字不影響判斷
+print(" \t　\r\n".isspace())  # 是否是半形空格、全形空格、\r、\n、\t
+print("Abc Qoo".istitle())  # 是否每個單字都是開頭大寫，後面小寫
+print("abc".isprintable())  # 是否是可見字元，如 \a \b \t \n 都是不可見的
+print("print".isidentifier())  # 是否是合法的變數名，如數字開頭就不可以
