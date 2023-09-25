@@ -94,7 +94,7 @@ my_string = "abc apple"
 print(my_string.upper())
 print(my_string.lower())
 print(my_string.capitalize())
-print(my_string.title(), my_string.istitle()) # 多個 capitalize，如果是就是 True
+print(my_string.title(), my_string.istitle())  # 多個 capitalize，如果是就是 True
 print(my_string)
 
 print(my_string[-1])
