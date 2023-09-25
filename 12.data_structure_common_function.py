@@ -1,8 +1,8 @@
 # list set dict str tuple
 # len()  長度
-# max()　最大值，只支援敗字和浮點數，dict 只會抓 key
-# min()　最小值，只支援敗字和浮點數，dict 只會抓 key
-# sum()  加總，只支援敗字和浮點數，dict 只會抓 key
+# max()　最大值，只支援數字和浮點數，dict 只會抓 key
+# min()　最小值，只支援數字和浮點數，dict 只會抓 key
+# sum()  加總，只支援數字和浮點數，dict 只會抓 key
 # list() 轉 list，可以自己轉自己，dict 只會保留 key，字串會每個字分開
 # tuple() 轉 tuple，可以自己轉自己，dict 只會保留 key，字串會每個字分開
 # str() 轉 string，可以自己轉自己，dict 「會」保留 key-value
