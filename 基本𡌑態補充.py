@@ -29,6 +29,9 @@ print(oct(20))
 print(hex(20))
 
 print("============ 字串 ============")
+s = u"一"
+print(s)
+
 """
     find、rfind
     找不到回傳 -1
@@ -110,9 +113,11 @@ print("123１２３".isdigit())
 print(b"9".isdigit())  # bytes 型態，isdecimal 和 isnumeric 會直接報錯
 print("123１２３".isdecimal())
 print("123壹貳參贰叁一二三１２３ⅠⅱⅲⅣ".isnumeric())
+print("========================")
 
-print("123F".isalnum())  # [0-9][A-Z][a-z]
-print("Fghi".isalpha())  # [A-Z][a-z]
+# https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%B5%B1%E4%B8%80%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97_(Unicode%E5%8D%80%E6%AE%B5)
+print("123F一ブ\u4e00".isalnum())  # [A-Z][a-z]['/u3400'-'/ufa2d'中日韓][0-9]
+print("Fghi一ブ\u4e00".isalpha())  # [A-Z][a-z]['/u3400'-'/ufa2d'中日韓]
 print("Zz".isascii())
 
 print("abc@".islower())  # 非英文字不影響判斷
@@ -120,4 +125,11 @@ print("ABC#".isupper())  # 非英文字不影響判斷
 print(" \t　\r\n".isspace())  # 是否是半形空格、全形空格、\r、\n、\t
 print("Abc Qoo".istitle())  # 是否每個單字都是開頭大寫，後面小寫
 print("abc".isprintable())  # 是否是可見字元，如 \a \b \t \n 都是不可見的
-print("print".isidentifier())  # 是否是合法的變數名，如數字開頭就不可以
+print("print".isidentifier())  # 是否是合法的變數名，如數字開頭就不可以，不包括關鍵字
+
+# 將 \t 轉換成空格，預設是 8 個字一組
+print("good\tboy!\teat\t\ting".expandtabs())  # good    boy!    eat             ing
+print("good\tboy!\teat\t\ting".expandtabs(1))  # good boy! eat  ing
+print("good\tboy!\teat\t\ting".expandtabs(2))  # good  boy!  eat   ing
+print("good\tboy!\teat\t\ting".expandtabs(3))  # good  boy!  eat      ing
+print("good\tboy!\teat\t\ting".expandtabs(4))  # good    boy!    eat     ing
