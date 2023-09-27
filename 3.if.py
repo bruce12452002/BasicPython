@@ -3,7 +3,7 @@ import operator
 # https://docs.python.org/zh-tw/3/library/operator.html#mapping-operators-to-functions
 # and、or(邏輯運算)   &、|、^、~(算術運算)
 # is、is not(比較記憶體)   ==、!=(比較值)
-# 一般工作都是用 and or == !=
+# 一般工作都是用 and or not == !=
 print("============ 算術運算不等於邏輯運算 ============")
 aaa = 15
 bbb = 10

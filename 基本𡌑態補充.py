@@ -115,10 +115,28 @@ print("123１２３".isdecimal())
 print("123壹貳參贰叁一二三１２３ⅠⅱⅲⅣ".isnumeric())
 print("========================")
 
-# https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%B5%B1%E4%B8%80%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97_(Unicode%E5%8D%80%E6%AE%B5)
-print("123F一ブ\u4e00".isalnum())  # [A-Z][a-z]['/u3400'-'/ufa2d'中日韓][0-9]
-print("Fghi一ブ\u4e00".isalpha())  # [A-Z][a-z]['/u3400'-'/ufa2d'中日韓]
-print("Zz".isascii())
+# https://www.ifreesite.com/unicode/character.htm
+print("Zz".isascii())  # 0000~007F
+print("123F一ブʯſ\u4e00".isalnum())  # [A-Z][a-z][0-9] unicode
+print("Fghi一ブ\u4e00".isalpha())  # [A-Z][a-z] unicode
+
+
+def alnum_or_alpha_test(alnum):
+    i = 1
+    while i <= 1000:
+        unicode = chr(i)
+
+        if alnum:
+            judge = unicode.isalnum()
+        else:
+            judge = unicode.isalpha()
+
+        if judge:
+            print(hex(i), unicode)
+        i += 1
+
+
+alnum_or_alpha_test(True)
 
 print("abc@".islower())  # 非英文字不影響判斷
 print("ABC#".isupper())  # 非英文字不影響判斷
