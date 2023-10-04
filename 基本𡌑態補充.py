@@ -33,6 +33,7 @@ s = u"一"
 print(s)
 
 """
+    https://docs.python.org/3/library/stdtypes.html
     find、rfind
     找不到回傳 -1
 """
@@ -66,7 +67,7 @@ print(s.rindex("a", 5, 10))  # 5
     沒找到分割的字串，就是原本的字串
 '''
 s = "$12$34$56$78$"
-print(s.split("$", 2))  # ['12', '34', '56$78']
+print(s.split(sep="$", maxsplit=2))  # ['12', '34', '56$78']
 print(s.rsplit("$", 2))  # ['12$34', '56', '78']
 
 '''

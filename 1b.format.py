@@ -1,9 +1,11 @@
-print("============ 字串格式化一 ============")
+# https://docs.python.org/3/tutorial/introduction.html#text
+print("============ 字串格式化一 printf style ============")
 # %d %s %f 為 digital(數字) string(字串) float(浮點數), %d 等同 %i
 # 格式為 "%s" % (取代 %s 的字串)，如果只有一個要取代，圓括可不寫
 # %s 什麼都可以接收；%d 和 %f 只能傳數字，否則報錯
 # %d 給浮點數會無條件括去小數；%f 給整數會自動將後面 .0
 # %f 預設小數 6 位，如果想將後面的 0 去掉，可用 %g
+# https://docs.python.org/zh-tw/3/library/stdtypes.html#printf-style-string-formatting
 
 print("Hello! %s")
 # print("Hello! %" % ("world"))
@@ -22,7 +24,7 @@ print(g)
 h = "n1=%d n2=%.2f n3=%3.2f n4=%10.2f" % (1.55, 2.567, 1234.789, 1234.678)
 print(h)
 
-print("============ 字串格式化二 ============")
+print("============ 字串格式化二 literal ============")
 i = "haha"
 j = 1.111
 k = 56
