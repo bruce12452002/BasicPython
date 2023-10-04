@@ -5,7 +5,7 @@ print("============ 字串格式化一 printf style ============")
 # %s 什麼都可以接收；%d 和 %f 只能傳數字，否則報錯
 # %d 給浮點數會無條件括去小數；%f 給整數會自動將後面 .0
 # %f 預設小數 6 位，如果想將後面的 0 去掉，可用 %g
-# https://docs.python.org/zh-tw/3/library/stdtypes.html#printf-style-string-formatting
+# https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
 
 print("Hello! %s")
 # print("Hello! %" % ("world"))
@@ -42,7 +42,7 @@ ooo = 9
 print(f"{xxx} is %3d" % ooo)
 
 print("============ 字串格式化三 ============")
-# 參考 https://docs.python.org/zh-tw/3/library/stdtypes.html#str.format
+# 參考 https://docs.python.org/3/library/stdtypes.html#str.format
 print('1.{1} and {0} and {0}'.format('aaa', 'bbb'))  # 手動指定第幾個參數
 
 # 依參數名稱賦值，k=v 一律放在最後面，不可穿插在中間
