@@ -29,7 +29,10 @@ print(oct(20))
 print(hex(20))
 
 print("============ 字串 ============")
-s = u"一"
+s = u"一"  # 預設就是 u
+print(s)
+
+s = r"一\r\n"
 print(s)
 
 """
