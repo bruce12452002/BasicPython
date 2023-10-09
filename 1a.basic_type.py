@@ -40,7 +40,7 @@ print("============ 宣告變數 ============")
 # https://docs.python.org/zh-tw/3/reference/lexical_analysis.html#identifiers
 # = += -= *= /= //= %= **=，python 沒有 ++ -- 語法
 a = 2
-a *= 5  # a = a + 5
+a *= 5  # a = a * 5
 print(a)
 x, y, z = 1, 2.3, "ooo"
 print(x, y, z)
