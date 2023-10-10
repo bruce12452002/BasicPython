@@ -13,15 +13,16 @@ a = int(input("請輸入一個整數:"))
 b = int(input("請再輸入一個整數:"))
 sign = input("請輸入 +、-、*、/、//、% 其中之一:").strip()
 
-if sign == '+':
-    print(a + b)
-elif sign == '-':
-    print(a - b)
-elif sign == '*':
-    print(a * b)
-elif sign == '/':
-    print(a / b)
-elif sign == '//':
-    print(a // b)
-elif sign == '%':
-    print(a % b)
+match sign:
+    case '+':
+        print(a + b)
+    case '-':
+        print(a - b)
+    case '*':
+        print(a * b)
+    case '/':
+        print(a / b)
+    case '//':
+        print(a // b)
+    case '%':
+        print(a % b)
