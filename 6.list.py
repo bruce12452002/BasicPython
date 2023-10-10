@@ -132,13 +132,21 @@ my_list = ["a", "b", "c"]
 for i, v in enumerate(my_list):
     print(i, v, sep="=")
 
-print("============ for + list 刪除 ============")
-# for + list 刪除時，index 會自動往上，所以如果有連續相同的資料，後面會刪不到
+print("============ for/while + list 刪除 ============")
+# for/while + list 刪除時，index 會自動往上，所以如果有連續相同的資料，後面會刪不到
 my_list = ["a", "b", "b", "c"]
 KEY = "b"
 for i in my_list:
     if i == KEY:
         my_list.remove(KEY)
+print(my_list)
+
+my_list = ["a", "b", "b", "c"]
+i = 0
+while i < len(my_list):
+    if my_list[i] == KEY:
+        my_list.remove(KEY)
+    i += 1
 print(my_list)
 
 # 解決方法是從後面開始刪除
@@ -148,6 +156,10 @@ for i in range(len(my_list) - 1, -1, -1):
     if my_list[i] == KEY:
         my_list.remove(KEY)
 print(my_list)
+
+# 另一個方法是保留不是 b 的
+my_list = ["a", "b", "b", "c"]
+print([i for i in my_list if i != KEY])
 
 print("============ 雙向佇列 ============")
 from collections import deque
