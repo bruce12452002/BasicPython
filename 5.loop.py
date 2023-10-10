@@ -9,6 +9,7 @@ print()
 #     pass  # 什麼都不做，但還是有在執行，所以是無限迴圈
 
 print("============ for ============")
+# for 不會有無限迴圈
 letter = "abc"
 for i in letter:
     print(i, end=' ')
