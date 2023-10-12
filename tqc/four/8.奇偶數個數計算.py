@@ -17,3 +17,14 @@
 Even numbers: 5
 Odd numbers: 5
 """
+even = 0
+odd = 0
+for i in range(10):
+    n = int(input("請輸入第" + str(i + 1) + "個整數:"))
+    if n % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+
+print("Even numbers: %d" % even)
+print("Odd numbers: %d" % odd)

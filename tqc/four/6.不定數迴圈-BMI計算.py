@@ -1,5 +1,6 @@
 """
-請撰寫一程式，以不定數迴圈的方式輸入身高與體重，計算出BMI之後再根據以下對照表，印出BMI及相對應的BMI代表意義（State）。
+請撰寫一程式，以不定數迴圈的方式輸入身高與體重，計算出BMI之後再根據以下對照表，
+印出BMI及相對應的BMI代表意義（State）
 假設此不定數迴圈輸入-9999則會結束此迴圈。標準如下表所示：
 
 BMI值			代表意義
@@ -23,14 +24,14 @@ State: fat
 """
 while True:
     height = int(input('請輸入身高:'))
-    
+
     if height == -9999:
         break
-    
+
     weight = int(input('請輸入體重:'))
     BMI = weight / (height / 100) ** 2
     print("BMI:%.2f" % BMI)
-    
+
     if BMI < 18.5:
         print("State:under weight")
     elif 18.5 <= BMI < 25:
