@@ -10,3 +10,13 @@
 
 1683
 """
+
+
+def compute(a, b):
+    count = 0
+    for i in range(a, b + 1):
+        count += i
+    print(count)
+
+
+compute(33, 66)

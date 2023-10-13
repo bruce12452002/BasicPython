@@ -11,3 +11,16 @@ Department: Information Management
 Student ID: 123456789
 Name: Tina Chen
 """
+
+
+def compute():
+    depart = input("請輸入系別:")
+    student_id = int(input("請輸入學號:"))
+    name = input("請輸入姓名:")
+
+    print("Department:  %s" % depart)
+    print("Student ID:  %s" % student_id)
+    print("Name:  %s" % name)
+
+
+compute()

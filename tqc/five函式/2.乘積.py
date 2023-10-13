@@ -8,3 +8,12 @@
 範例輸出
 616
 """
+
+
+def compute(a, b):
+    return a * b
+
+
+x = int(input("請輸入一個整數:"))
+y = int(input("請再輸入一個整數:"))
+print(compute(x, y))
