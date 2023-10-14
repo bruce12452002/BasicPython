@@ -10,3 +10,11 @@
 
 2744
 """
+
+
+def compute(a, b):
+    return a ** b
+
+
+result = compute(int(input("請輸入一個整數:")), int(input("請再輸入一個整數:")));
+input(result)

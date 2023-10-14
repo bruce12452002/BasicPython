@@ -17,3 +17,21 @@ e e e e e
 e e e e e 
 e e e e e 
 """
+
+
+def compute(character, row, column):
+    for i in range(column):
+        for j in range(row):
+            print(f"{character:<2}", end="")
+        print()
+
+    print("利用字串的 *")
+    for i in range(column):
+        print(f"{character:<2}" * row)
+
+
+a = input("請輸入一個字元:")
+x = int(input("請輸入 row 數:"))
+y = int(input("請輸入 column 數:"))
+
+compute(character=a, row=x, column=y)
