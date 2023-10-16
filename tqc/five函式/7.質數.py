@@ -28,3 +28,22 @@ Not Prime
 範例輸出5
 Not Prime
 """
+
+
+def compute(n):
+    if n == 0 or n == 1:
+        return False
+
+    if n < 0:
+        n *= -1
+
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
+if compute(-7):
+    print('Prime')
+else:
+    print('Not Prime')

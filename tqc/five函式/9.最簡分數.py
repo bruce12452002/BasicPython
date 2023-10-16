@@ -16,3 +16,15 @@
 範例輸出2
 12/16 + 18/32 = 21/16
 """
+import math
+
+
+def compute(x, y):
+    return math.gcd(x, y)
+
+
+x, y = eval(input("請輸入第一組分數:"))
+m, n = eval(input("請輸入第二組分數:"))
+p = int((x * n + y * m) / (compute(x * n + y * m, y * n)))
+q = int(y * n / (compute(x * n + y * m, y * n)))
+print("{}/{} + {}/{} = {}/{}".format(x, y, m, n, p, q))
