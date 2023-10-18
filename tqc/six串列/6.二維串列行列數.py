@@ -16,3 +16,10 @@
   -3  -2  -1   0   1   2   3   4   5   6
   -4  -3  -2  -1   0   1   2   3   4   5
 """
+row = 5
+column = 10
+
+for i in range(row):
+    for j in range(column):
+        print(f"{j - i:>4d}", end="")
+    print()
