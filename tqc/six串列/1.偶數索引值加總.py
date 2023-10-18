@@ -23,3 +23,17 @@
  18 44 83
 278
 """
+n = 12
+my_list = []
+for i in range(n):
+    my_list.append(int(input("請輸入整數:")))
+
+summary = 0
+for i in range(len(my_list)):
+    print("{:>3}".format(my_list[i]), end=" ")
+    if (i + 1) % 3 == 0:
+        print()
+
+    if i % 2 == 0:
+        summary += my_list[i]
+print(summary)

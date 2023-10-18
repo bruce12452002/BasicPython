@@ -29,3 +29,9 @@
 範例輸出2
 246 139 122
 """
+my_list = []
+for i in range(10):
+    my_list.append(int(input('請輸入數字:')))
+
+my_list.sort()
+print(my_list[-1], my_list[-2], my_list[-3])
