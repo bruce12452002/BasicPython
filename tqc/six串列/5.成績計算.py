@@ -19,26 +19,37 @@
 78.88
 """
 
-low, high, count = 0, 0, 0
+# low, high, count = 0, 0, 0
+# loop = 10
+# my_list = []
+# for i in range(loop):
+#     n = int(input("請輸入整數:"))
+#     my_list.append(n)
+#
+#     if i == 0:
+#         low = n
+#         high = n
+#
+#     if low > n:
+#         low = n
+#
+#     if high < n:
+#         high = n
+#
+#     count += n
+#
+# count -= low + high
+# avg = count / (loop - 2)
+# print(count)
+# print(f"{avg:.2f}")
+
+print('========== 使用內鍵方法 =========')
 loop = 10
-my_set = set()
+my_list = []
 for i in range(loop):
     n = int(input("請輸入整數:"))
-    my_set.add(n)
+    my_list.append(n)
 
-    if i == 0:
-        low = n
-        high = n
-
-    if low > n:
-        low = n
-
-    if high < n:
-        high = n
-
-    count += n
-
-count -= low + high
-avg = count / (loop - 2)
+count = sum(my_list) - max(my_list) - min(my_list)
 print(count)
-print(f"{avg:.2f}")
+print(f"{count / (loop - 2):.2f}")
