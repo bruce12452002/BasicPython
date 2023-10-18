@@ -40,8 +40,13 @@ print("============ 宣告變數 ============")
 # https://docs.python.org/zh-tw/3/reference/lexical_analysis.html#identifiers
 # = += -= *= /= //= %= **=，python 沒有 ++ -- 語法
 a = 2
-a *= 5  # a = a * 5
+a *= 5  # a = a * (5) 有括號有括有括號
 print(a)
+
+# 例子
+a1, b1, c1 = 5, 2, 1
+a1 -= b1 - c1  # a1 = a1 - (b1 - c1) ==> 4
+
 x, y, z = 1, 2.3, "ooo"
 print(x, y, z)
 # print = 3

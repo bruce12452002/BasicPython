@@ -27,5 +27,7 @@ for i in range(10):
     else:
         my_dict[n] = 1
 
-print(max(my_dict.values()))
-
+for k, v in my_dict.items():
+    if v == max(my_dict.values()):
+        print(k)
+        print(v)
