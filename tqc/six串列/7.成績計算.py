@@ -31,3 +31,27 @@ Student 3
 #sum 415
 #average 83.00
 """
+score = 5
+
+
+def compute(sid):
+    person = ['1st', '2nd', '3rd']
+
+    result = [0] * sid
+    for i in range(sid):
+        total = 0
+
+        print(f"The {person[i]} student:")
+        for j in range(score):
+            n = int(input())
+            total += n
+        result[i] = total
+    return result
+
+
+p = 3
+rtn = compute(p)
+for r in range(p):
+    print(f"Student {r + 1}")
+    print(f"#sum {rtn[r]}")
+    print(f"#average {rtn[r] / score:.2f}")
