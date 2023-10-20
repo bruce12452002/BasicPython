@@ -43,6 +43,7 @@ print(my_set2.pop())
 print(my_set2)
 
 print("============ 常用方法-修改 ============")
+# 名稱雖然叫修改，實際上是新增元素，可能是對整個 set 修改，所以叫修改吧
 my_set2.update({1: "xxx", "a": "bbb"})  # 將資料結構覆蓋到左邊，如果資料結構是 dict 只取 key
 print(my_set2)
 
