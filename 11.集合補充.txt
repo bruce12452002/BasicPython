@@ -1,5 +1,5 @@
-        list                tuple       set                 dict
-增   append、insert、extend              add                 setdefault
-刪   remove、clear、索引                  remove、discard     pop、popitem
-改   索引                                update              索引
-查   index、pop              index、索引  pop                 索引、get、keys、values
+        list                tuple       set                     dict
+增   append、insert、extend              add                     setdefault、索引
+刪   remove、clear、索引、pop             remove、discard、pop     pop、popitem
+改   索引                                update                 索引
+查   index、pop              index、索引  pop                    索引、get、keys、values
