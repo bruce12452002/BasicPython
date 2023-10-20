@@ -39,8 +39,6 @@ my_set2.add("d")
 my_set2.add("b")
 my_set2.add("d")
 print(my_set2)
-print(my_set2.pop())
-print(my_set2)
 
 print("============ 常用方法-修改 ============")
 # 名稱雖然叫修改，實際上是新增元素，可能是對整個 set 修改，所以叫修改吧
@@ -57,9 +55,9 @@ print(my_set2)
 
 print("============ set 運算-str ============")
 # 聯集 union，等同 |
-# 交集 intersection，等同 &
-# 差集 difference，等同 -
-# 互斥 symmetric_difference，等同 ^
+# 交集 intersection，等同 &，intersection_update會改變原集合
+# 差集 difference，等同 -，difference_update 會改變原集合
+# 互斥 symmetric_difference，等同 ^，symmetric_difference_update 會改變原集合
 
 a = set('abracadabra')
 b = set('alacazam')
