@@ -1,8 +1,6 @@
 import pandas as pd
 
 print("============ DataFrame ============")
-# DataFrame 相當於多維陣列
-
 c = pd.read_csv("./csv_file.csv")
 print(c['姓名'], type(c['姓名']))  # 一個欄位回傳 Series
 print(c[['姓名', '電話']], type(c[['姓名', '電話']]))  # 多個欄位回傳 DataFrame
