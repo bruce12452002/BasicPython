@@ -18,6 +18,7 @@ plt.rc("font", family="DFBiaoKaiShu-B5")
 (1,3)(2,6)(3,9)(4,12)(5,15)
 '''
 # plt.plot([1, 2, 3, 4, 5], [3, 6, 9, 12, 15])
+# plt.show()
 
 '''
 兩筆資料
