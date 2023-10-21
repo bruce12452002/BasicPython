@@ -1,7 +1,8 @@
 import numpy as np
 
-# https://numpy.
-# numpy 等同 python 的陣列，但 numpy 效能好很多
+# 官網連結
+# https://numpy.org/doc/stable/
+# numpy 類似 python 的陣列，但 numpy 效能好很多
 print(np.__version__)
 
 print("============ 零一維陣列 ============")

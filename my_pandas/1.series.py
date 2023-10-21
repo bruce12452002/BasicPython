@@ -1,5 +1,7 @@
 import pandas as pd
 
+# 官網連結
+# https://pandas.pydata.org/docs/user_guide/index.html
 '''
 Series：長或寬(一維陣列)
 '''
