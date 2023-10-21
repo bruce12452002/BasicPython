@@ -34,6 +34,22 @@ print("============ 讀檔二 ============")
 with open("test.txt", "r", encoding="UTF-8") as rf:  # with-open 結束時會自動 close，就算遇到 exception 也可以
     print(rf.readlines())
 
+print("============ 讀 csv 檔 ============")
+import csv
+
+file = open("salary.csv", encoding='UTF-8')
+reader = csv.reader(file)
+# i = 0
+# while i < 4:
+#     print(next(reader))
+#     i += 1
+
+# next 完了之後，reader 就不會往下跑了
+for r in reader:
+    print(r)
+
+file.close()
+
 print("============ 寫檔一 ============")
 write_file = open("test2.txt", "w", encoding="UTF-8")  # 檔案不在會自動新增，但再次執行會覆蓋原本的內容，可改用 a
 write_file.write("hello file\n")
