@@ -13,7 +13,7 @@ print(f"{myList1}, {type(myList1)}")
 print(f"{myList2}, {type(myList2)}")
 print(list({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 
-print("============ list 可嵌套 ============")
+print("============ list 可嵌套、可巢狀 ============")
 myList3 = [[1, 2, 3], ["1", 2, False]]
 print(f"{myList3}, {type(myList3)}")
 print(myList1[0], myList1[1], myList1[-1])

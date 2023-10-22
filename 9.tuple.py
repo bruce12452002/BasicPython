@@ -41,7 +41,7 @@ print(my_tuple8[0])
 print(my_tuple8[-2])
 print("haha" in my_tuple8)
 
-print("============ tuple 可嵌套 ============")
+print("============ tuple 可嵌套、可巢狀 ============")
 my_tuple_tuple = ((1, 2, 3), ("a", "b"), [True, False])
 print(my_tuple_tuple)
 print(type(my_tuple_tuple))
