@@ -64,11 +64,17 @@ with open("test2.txt", "w", encoding="UTF-8") as wf:
     wf.flush()
 
 print("============ 讀寫檔 ============")
-with open("test.txt", "a+", encoding="utf-8") as ra:
-    ra.seek(1)  # 注意非 ASCII 編碼的 Byte 大小
-    print(ra.readline(), end=" ")
+# with open("test.txt", "a+", encoding="utf-8") as ra:
+#     ra.seek(1)  # 注意非 ASCII 編碼的 Byte 大小
+#     print(ra.readline(), end=" ")
+#
+#     ra.seek(13)
+#     print(ra.readline(), end=" ")
+#
+#     ra.write("haha")
 
-    ra.seek(13)
-    print(ra.readline(), end=" ")
+print("============ 讀 git 的 hash 檔 ============")
+import zlib
 
-    ra.write("haha")
+with open("b97155ddcb78999738c8380449abf2fe03c8f3", "rb") as h:
+    print(zlib.decompress(h.read()))  # b'blob 5\x00xxx \n'
