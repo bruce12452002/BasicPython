@@ -16,3 +16,15 @@ Max: 34
 Min: -23
 Sum: 46
 """
+my_list = list()
+
+while True:
+    n = int(input("請輸入整數:"))
+    if n == -9999:
+        break
+    my_list.append(n)
+
+print(f"Length: {len(my_list)}")
+print(f"Max: {max(my_list)}")
+print(f"Min: {min(my_list)}")
+print(f"Sum: {sum(my_list)}")
