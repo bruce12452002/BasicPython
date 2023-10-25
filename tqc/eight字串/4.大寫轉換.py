@@ -1,5 +1,6 @@
 """
-請撰寫一程式，讓使用者輸入一字串，分別將該字串轉換成全部大寫以及每個字的第一個字母大寫
+請撰寫一程式，讓使用者輸入一字串，
+分別將該字串轉換成全部大寫以及每個字的第一個字母大寫
 
 範例輸入
 learning python is funny
@@ -7,3 +8,6 @@ learning python is funny
 LEARNING PYTHON IS FUNNY
 Learning Python Is Funny
 """
+st = "learning python is funny"
+print(st.upper())
+print(st.title())

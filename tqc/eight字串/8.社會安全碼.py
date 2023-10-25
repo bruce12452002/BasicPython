@@ -12,3 +12,12 @@ Valid SSN
 範例輸出2
 Invalid SSN
 """
+st = input("請輸入社會安全碼SSN，格式為ddd-dd-dddd，d表示數字: ")
+num = st.split("-")
+
+for s in num:
+    if not s.isdigit():
+        print("Invalid SSN")
+        break
+else:
+    print("Valid SSN")

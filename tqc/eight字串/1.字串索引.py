@@ -13,3 +13,14 @@ Index of 'i': 5
 Index of 'c': 6
 Index of 'h': 7
 """
+st = "Sandwich"
+
+print("方法一")
+for i, s in enumerate(st):
+    print(f"Index of '{s}': {i}")
+
+print("方法二")
+index = 0
+for s in st:
+    print(f"Index of '{s}': {index}")
+    index += 1

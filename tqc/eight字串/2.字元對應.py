@@ -1,5 +1,5 @@
 """
-請撰寫一程式，要求使用者輸入一字串，顯示該字串每個字元的對應ASCII碼及其總和。
+請撰寫一程式，要求使用者輸入一字串，顯示該字串每個字元的對應ASCII碼及其總和
 
 範例輸入
 Kingdom
@@ -13,3 +13,10 @@ ASCII code for 'o' is 111
 ASCII code for 'm' is 109
 713
 """
+st = "Kingdom"
+count = 0
+for s in st:
+    ascii_point = ord(s)
+    count += ascii_point
+    print(f"ASCII code for '{s}' is {ascii_point}")
+print(count)
