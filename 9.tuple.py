@@ -115,3 +115,15 @@ def tuple_for_range():
 
 tuple_for_range()
 print()
+
+print("============ loop + tuple 裡是集合 ============")
+tupled = ({"ab": "111", "cd": "222"})
+tuples = ({"a", "b"}, {"c", "d"})
+tuplet = (("a", "b"), ("c", "d"))
+tuplel = (["a", "b"], ["c", "d"])
+
+# k, v 是兩個變數，所以集合裡都得是兩個
+# 注意 dict，只會取得 key，會 key 的長度，如果是 2 長，就可用 2 個變數
+# 注意 set 的值，key value 有可能會調換
+for k, v in tuplel:
+    print(f"{k}:", v)

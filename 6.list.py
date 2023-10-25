@@ -132,6 +132,19 @@ my_list = ["a", "b", "c"]
 for i, v in enumerate(my_list):
     print(i, v, sep="=")
 
+print("============ loop + list 裡是集合 ============")
+listd = [{"a": "b", "c": "d"}]
+lists = [{"a", "b"}, {"c", "d"}]
+listt = [("a", "b"), ("c", "d")]
+listl = [["a", "b"], ["c", "d"]]
+
+# k, v 是兩個變數，所以集合裡都得是兩個
+# 注意 dict，只會取得 key，k-v 算一組，會取第一組的 key 和第二組的 key
+# 如果是三個變數，那就需要三組，太多或太少都會報錯
+# 注意 set 的值，key value 有可能會調換
+for k, v in listl:
+    print(f"{k}:", v)
+
 print("============ for/while + list 刪除 ============")
 # for/while + list 刪除時，index 會自動往上，所以如果有連續相同的資料，後面會刪不到
 my_list = ["a", "b", "b", "c"]

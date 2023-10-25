@@ -97,6 +97,10 @@ for d in my_dict4:  # 只會遍歷 key
     print(d, end=" ")
 print()
 
+for k1a, k1b in my_dict4:  # k1 和 k2 都是 2 長，所以可用兩個變數加；如果 3 長就用 3 個變數接
+    print(f"{k1a}:", k1b, end=" ")
+print()
+
 for d in my_dict4.keys():
     print(d, end=" ")
 print()

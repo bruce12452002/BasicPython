@@ -4,17 +4,19 @@
 set3是否為set1的超集合（superset）？
 
 輸入與輸出會交雜如下，輸出的部份以粗體字表示
-Input to set1:
+**Input to set1:**
 3
 28
 -2
 7
 39
-Input to set2:
+
+**Input to set2:**
 2
 77
 0
-Input to set3:
+
+**Input to set3:**
 3
 28
 12
@@ -24,6 +26,7 @@ Input to set3:
 -1
 -2
 65
+
 set2 is subset of set1: False
 set3 is superset of set1: True
 """

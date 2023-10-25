@@ -109,6 +109,13 @@ print("============ for + set ============")
 for e in new_diff2:
     print(e)
 
+print("============ for + set 裡是集合 ============")
+# set 裡的集合，只能是 tuple
+sett = {("a", "b"), ("c", "d")}
+print(type(sett.pop()))
+for k, v in sett:
+    print(f"{k}:", v)
+
 print("============ 類別去重 ============")
 
 
