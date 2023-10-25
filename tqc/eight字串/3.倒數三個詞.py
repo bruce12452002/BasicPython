@@ -9,5 +9,10 @@ study in FJU
 """
 st = "Many foreign students study in FJU"
 all_word = st.split(" ")
-for i in all_word[-3::]:
-    print(i, end=" ")
+
+# 方法一
+print(' '.join(all_word[-3::]))
+
+# 方法二
+# for i in all_word[-3::]:
+#     print(i, end=" ")

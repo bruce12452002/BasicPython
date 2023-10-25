@@ -17,11 +17,23 @@ Valid password
 範例輸出2
 Invalid password
 """
-password = input("請輸入密碼: ")
+# 主要是 「c. 至少要有一個大寫英文字母」要寫的好看在難寫
 
-for i in range(len(password)):
-    if len(password) < 8 or (not (password[i].isdigit() or password[i].isalpha())):
-        print("Invalid password")
-        break
-else:
+
+def check(password):
+    upper = False
+    if len(password) < 8:
+        return False
+    else:
+        for s in password:
+            if not s.isalnum():
+                return False
+            if 65 <= ord(s) <= 90:
+                upper = True
+    return upper
+
+
+if check(input("請輸入密碼: ")):
     print("Valid password")
+else:
+    print("Invalid password")

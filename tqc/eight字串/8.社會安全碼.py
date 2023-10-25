@@ -13,11 +13,19 @@ Valid SSN
 Invalid SSN
 """
 st = input("請輸入社會安全碼SSN，格式為ddd-dd-dddd，d表示數字: ")
-num = st.split("-")
 
-for s in num:
-    if not s.isdigit():
-        print("Invalid SSN")
-        break
-else:
+# 方法一
+# num = st.split("-")
+#
+# for s in num:
+#     if not s.isdigit():
+#         print("Invalid SSN")
+#         break
+# else:
+#     print("Valid SSN")
+
+# 方法二
+if st.replace("-", "").isdigit():
     print("Valid SSN")
+else:
+    print("Invalid SSN")

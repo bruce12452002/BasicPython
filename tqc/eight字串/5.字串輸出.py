@@ -12,5 +12,6 @@ python
 """
 st = "python"
 print(f"|{st:<10}|")
-print(f"|{st:^10}|")
+print("|{}|".format(st.ljust(10)))
+# print("|{}|".format(st.center(10)))
 print("|{:>10}|".format(st))
