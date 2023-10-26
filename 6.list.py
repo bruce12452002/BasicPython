@@ -5,6 +5,7 @@ print("============ 初始化 list 一 ============")
 a = list("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
 # a = list(1)  # is not iterable
 print(f"{a}, {type(a)}")  # 會拆開成三個元素
+print(list(range(10)))  # 0~9
 
 print("============ 初始化 list 二 ============")
 myList1 = [1, 2, 3]
@@ -72,6 +73,10 @@ s2 = tuple(myList2)
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
 # dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
+
+print("============ list 產生器 ============")
+print(list(i + 1 for i in range(10)))  # 1~10
+print([i + 1 for i in range(10)])  # 1~10
 
 print("============ loop + list ============")
 

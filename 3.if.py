@@ -55,6 +55,9 @@ elif score > 60:
 #     print("D class")
 print("非 if 區塊")
 
+print("============ if 的三元運算子 ============")
+print(True if 5 > 3 else False)
+
 print("============ __matmul__ ============")
 # 矩陣相乘
 # __matmul__ 和 @ 一樣
