@@ -20,8 +20,8 @@
 n1, n2, n3, n4 = 85, 4, 299, 478
 # n1 = int(input("n1:"))
 
-right = '|{:>5d} {:>5d}|'
-left = '|{:<5d} {:<5d}|'
+right: str = '|{:>5d} {:>5d}|'
+left: str = '|{:<5d} {:<5d}|'
 
 print(right.format(n1, n2))
 print(right.format(n3, n4))

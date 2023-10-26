@@ -22,8 +22,8 @@
 n1, n2, n3, n4 = 23.12, 395.30, 100.46, 564.33
 # n1 = float(input("n1:"))
 
-right = '|{:>7.2f} {:>7.2f}|'
-left = '|{:<7.2f} {:<7.2f}|'
+right: str = '|{:>7.2f} {:>7.2f}|'
+left: str = '|{:<7.2f} {:<7.2f}|'
 
 print(right.format(n1, n2))
 print(right.format(n3, n4))

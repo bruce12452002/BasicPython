@@ -19,8 +19,8 @@ Python
 
 s1, s2, s3, s4 = 'I', 'enjoy', 'learning', "Python"
 
-right = '|{:>10s} {:>10s}|'
-left = '|{:<10s} {:<10s}|'
+right: str = '|{:>10s} {:>10s}|'
+left: str = '|{:<10s} {:<10s}|'
 
 print(right.format(s1, s2))
 print(right.format(s3, s4))
