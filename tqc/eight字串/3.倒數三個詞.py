@@ -11,7 +11,7 @@ st = "Many foreign students study in FJU"
 all_word = st.split(" ")
 
 # 方法一
-print(' '.join(all_word[-3::]))
+print(" ".join(all_word[-3::]))
 
 # 方法二
 # for i in all_word[-3::]:

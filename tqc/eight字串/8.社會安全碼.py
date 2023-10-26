@@ -25,7 +25,4 @@ st = input("請輸入社會安全碼SSN，格式為ddd-dd-dddd，d表示數字: 
 #     print("Valid SSN")
 
 # 方法二
-if st.replace("-", "").isdigit():
-    print("Valid SSN")
-else:
-    print("Invalid SSN")
+print("Valid SSN" if st.replace("-", "").isdigit() else "Invalid SSN")
