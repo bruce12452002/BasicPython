@@ -11,3 +11,6 @@ Sam 77
 Karen 92
 Kelena 92
 """
+with open("write.txt", mode="at") as f:
+    for i in range(5):
+        f.write(input("請輸入資料: ") + '\n')

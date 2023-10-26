@@ -15,3 +15,21 @@
 9998 9996 9999
 **3.00**
 """
+n = int(input("請輸入測試次數: "))
+if 1 <= n <= 100:
+    for i in range(n):
+        st = input("請輸入測試資料，數字之間以空白隔開: ")
+        maxi = 0
+        mini = 0
+        first = True
+        for s in st.split(" "):
+            num = float(s)
+            if first:
+                maxi = num
+                mini = num
+                first = False
+            if maxi < num:
+                maxi = num
+            if mini > num:
+                mini = num
+        print(f"{maxi - mini:.2f}")
