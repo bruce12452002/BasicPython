@@ -8,8 +8,8 @@ read.txt內容
 
 11 22 33 22 33 44 33 44 55 44 55 66 55 66 77
 """
-with open("read.txt", "rt") as r:
+with open("read902.txt", "rt") as f:
     count = 0
-    for i in r.readline().split(" "):
+    for i in f.readline().split(" "):
         count += int(i)
     print(count)

@@ -28,3 +28,14 @@ data.txt檔案內容
 Apple Kiwi Banana 
 Tomato Pear Durian
 """
+with open("data905.txt", mode="r+") as f:
+    s = input("輸入想刪除的字串: ")
+    print("=== Before the deletion")
+    data = f.read()
+    print(data)
+    data = data.replace(s, "")
+    print("=== After the deletion")
+    print(data)
+    f.truncate(0)
+    f.seek(0)
+    f.write(data)

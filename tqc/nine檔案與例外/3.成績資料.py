@@ -21,13 +21,13 @@ Tom
 Joyce
 Sarah
 """
-file_name = 'data.txt'
-with open(file_name, "a+") as a:
+file_name = 'data903.txt'
+with open(file_name, "a+") as f:
     for i in range(5):
-        a.write(input("請輸入名字: ") + '\n')
+        f.write(input("請輸入名字: ") + '\n')
 
     print("Append completed!")
     print(f'Content of "{file_name}":')
 
-    a.seek(0)
-    print(a.read())
+    f.seek(0)
+    print(f.read())

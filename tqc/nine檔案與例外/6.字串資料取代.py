@@ -12,8 +12,20 @@ pen trunks pants
 === After the replacement
 watch shoes skirt
 sneakers trunks pants
-data.txt內容
 
+data.txt內容
 watch shoes skirt
 pen trunks pants
 """
+with open("data906.txt", "r+") as f:
+    data = f.read()
+    print("=== Before the replacement")
+    print(data)
+
+    print("=== After the replacement")
+    data = data.replace(input("請輸入字串一: "), input("請輸入字串二: "))
+    print(data)
+
+    f.truncate(0)
+    f.seek(0)
+    f.write(data)
