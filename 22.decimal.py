@@ -47,6 +47,7 @@ print("============ 捨入模式-x捨y入 ============")
 
 # ROUND_HALF_EVEN
 # 奇數時是 ROUND_HALF_UP；偶數時是 ROUND_HALF_DOWN，假設要取整，那就看整數位是奇數還偶數
+# round() 也是這個
 
 # decimal.ROUND_05UP：假設要取整，整數位為 5 或 0 就進位，但沒小數位不進位(最後連續的0不算)
 
