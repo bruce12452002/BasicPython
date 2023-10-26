@@ -36,4 +36,3 @@ with open("read908.txt", mode="r") as f:
     my_list.sort()
     for result in my_list:
         print(result)
-

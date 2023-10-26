@@ -8,6 +8,7 @@ Bonnie 235689147
 Simon 987612345
 Louis 675489321
 Andy 019238475
+
 範例輸出
 The content of "data.dat":
 Karen 123456789
@@ -20,3 +21,11 @@ Louis 675489321
 
 Andy 019238475
 """
+file_name = "data.dat"
+with open(file_name, mode="w") as f:
+    for i in range(5):
+        f.write(input("請輸入資料: ") + '\n')
+
+with open(file_name) as f:
+    print(f'The content of "{file_name}":')
+    print(f.read())
