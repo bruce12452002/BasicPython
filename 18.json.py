@@ -13,12 +13,16 @@ print(f"{my_list}, {type(my_list)}")
 for x in my_list:
     print(f"{x}, {type(x)}")  # 已是 dict
 
+# 使用 while
 # i = 0
 # while i < len(my_list):
-#     print(my_list[i])
+#     print(my_list[i], type(my_list[i]))
 #     i += 1
 
 # x = '{"name": "孫悟空", "attack": 90}'  # 裡面雙引號，外面單引號才能轉成功
+# x = "{\"name\": \"孫悟空\", \"attack\": 90}"  # 全部雙引號也可以轉換成功
+# x = '{\'name\': \'孫悟空\', \'attack\': 90}' # 全部單引號會報錯
+# x = "{'name': '孫悟空', 'attack': 90}"  # 裡面單引號，外面雙引號會報錯
 # my_dict = json.loads(x)
 # print(f"{my_dict}, {type(my_dict)}\n")
 

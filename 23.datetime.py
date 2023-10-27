@@ -1,25 +1,25 @@
 # https://docs.python.org/zh-tw/3/library/datetime.html#strftime-and-strptime-format-codes
-import datetime
+import datetime as d
 import time
 
 print("============ 取得現在時間 ============")
 # now 可以給 timezone；today 不行
 
-now = datetime.datetime.now()
-today = datetime.datetime.today()
+now = d.datetime.now()
+today = d.datetime.today()
 print(f"now={now}, today={today}")
 print(now.year, now.month, now.day)
 print(now.hour, now.minute, now.minute, now.microsecond)
 print(today.strftime("%Y/%m/%d %H:%M:%S.%f"))
 
 # now 給時區
-tzone = datetime.timezone(datetime.timedelta(hours=-5))
-print(datetime.datetime.now(tz=tzone))
+tzone = d.timezone(d.timedelta(hours=-5))
+print(d.datetime.now(tz=tzone))
 
 print("============ 設定時間 ============")
-print(datetime.date(2000, 10, 1))
-print(datetime.time(14, 20, 55, 666666))
-print(datetime.datetime(2010, 1, 10, 17, 20, 5, 222))
+print(d.date(2000, 10, 1))
+print(d.time(14, 20, 55, 666666))
+print(d.datetime(2010, 1, 10, 17, 20, 5, 222))
 
 print("============ 時間和時間戳轉換 ============")
 # 日期字串轉成時間
