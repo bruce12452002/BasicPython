@@ -42,7 +42,8 @@ print(my_set2)
 
 print("============ 常用方法-修改 ============")
 # 名稱雖然叫修改，實際上是新增元素，可能是對整個 set 修改，所以叫修改吧
-my_set2.update({1: "xxx", "a": "bbb"})  # 將資料結構覆蓋到左邊，如果資料結構是 dict 只取 key
+my_set2.update([3, 4, 5])
+my_set2.update({1: "xxx", "a": "bbb"})  # 資料結構是 dict 只取 key
 print(my_set2)
 
 print("============ 常用方法-刪除 ============")
@@ -53,11 +54,19 @@ print(my_set2)
 my_set2.clear()
 print(my_set2)
 
+print("============ 元素是數字時，感覺像有序的 ============")
+# 官方在 3.x 某一版有改過裡面的算法，都是數字時，每次都是一樣的
+# 但官方並沒說是有序的，哪天它想改就改了
+# 目前發現只有數字和浮點數會這樣
+s = {5, 6, 4, 2, 1, 8, 7}
+# s = {1, 3, 122, 6, 2, 4, 3, 1, 2, 22, 34, 22, 99, 200}
+print(s)
+
 print("============ set 運算-str ============")
 # 聯集 union，等同 |
 # 交集 intersection，等同 &，intersection_update會改變原集合
 # 差集 difference，等同 -，difference_update 會改變原集合
-# 互斥 symmetric_difference，等同 ^，symmetric_difference_update 會改變原集合
+# 互斥或 symmetric_difference，等同 ^，symmetric_difference_update 會改變原集合
 
 a = set('abracadabra')
 b = set('alacazam')

@@ -57,6 +57,7 @@ print(s)
     找不到回傳 -1
 """
 s = "123" + (3 * "哇哈哈") + "123"
+print(s)
 print(s.find("哇哈"))  # 3
 print(s.find("哈"))  # 4
 print(s.rfind("哈"))  # 11
@@ -86,9 +87,15 @@ print(s.rindex("a", 5, 10))  # 5
     沒找到分割的字串，就是原本的字串
 '''
 # split 沒參數，只要有和空有關的就會分割，如 \n \t
+s = "1 23\n456  78910"
+print(s.split())  # ['1', '23', '456', '78910']
+
 s = "$12$34$56$78$"
-print(s.split(sep="$", maxsplit=2))  # ['12', '34', '56$78']
-print(s.rsplit("$", 2))  # ['12$34', '56', '78']
+print(s.split(sep="$"))  # ['', '12', '34', '56', '78', '']
+
+# maxsplit 為最多分割幾次，如分割完還有剩下的，那就將剩下的為最後的值
+print(s.split(sep="$", maxsplit=2))  # ['', '12', '34$56$78$']
+print(s.rsplit("$", 2))  # ['$12$34$56', '78', '']
 
 '''
     strip、lstrip、rstrip

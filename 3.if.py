@@ -12,10 +12,10 @@ bbb = 10
 # print(aaa is not bbb)
 print(not True)  # 沒有「!」寫法
 
-# aaa & bbb 等於 10 為True；
-# (aaa == 15) & (bbb == 10) 為 True；
-# True & 奇數為 1；True & 偶數為 0，只看個為數； False & 數字都是 0
-if aaa == 15 & bbb == 10:  # 0 != 10
+# (aaa == 15) & (bbb == 10) 為 True
+# aaa == 15 & bbb == 10 為 False
+# 15 & bbb 得到 10 後，aaa == 10 為 False，最後 False == 10 為 False
+if aaa == 15 & bbb == 10:
     print("yes")
 else:
     print("no")

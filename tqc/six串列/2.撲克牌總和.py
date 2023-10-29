@@ -15,12 +15,14 @@ summary = 0
 for i in range(5):
     s = input("請輸入樸克牌號:")
 
-    match s:
-        case 'J' | 'K' | 'L' | 'j' | 'k' | 'l':
-            j = ord(s) - 63
-        case 'A' | 'a':
-            j = 1
-        case _:
-            j = int(s)
-    summary += j
+    if s.lower() == 'j':
+        summary += 11
+    elif s.lower() == 'q':
+        summary += 12
+    elif s.lower() == 'k':
+        summary += 13
+    elif s.lower() == 'a':
+        summary += 1
+    else:
+        summary += int(s)
 print(summary)
