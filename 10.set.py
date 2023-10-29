@@ -7,7 +7,7 @@ my_set2 = set("abc")  # 會拆開成三個元素； set() 是空 set； 這種�
 print(f"{my_set1}, {type(my_set1)}")
 print(f"{my_set2}, {type(my_set2)}")
 print(set({"abc": "ddd"}))  # 只會有 key，key 不會拆開
-print({"abc": "ddd"})  # 只會有 key，key 不會拆開
+print({"abc": "ddd"})  # 上行的推薦寫法會變成 dict，不是 set
 
 print("============ 可 hash ============")
 digit = 1

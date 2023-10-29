@@ -103,5 +103,7 @@ abc = {'a': 111, 'b': 222, 'c': 333.7}
 print('{0[c]:f} {0[a]:d} ' '{0[b]:d}'.format(abc))
 print('{c:f} {a:d} {b:d}'.format(**abc))
 
-my_list = ['s', 'ss']
+my_list = ['a', 'bc', 'def']
 print("{0[0]} {0[1]}".format(my_list))
+print("{[0]} {[1]} {[2]}".format(*my_list))
+print("{0[0]} {1[1]} {2[2]}".format(*my_list))
