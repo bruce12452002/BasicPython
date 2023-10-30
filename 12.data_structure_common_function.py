@@ -11,6 +11,19 @@
 # + 和 *：只支援 list 和 tuple，在最後增加元素和元素增加幾倍的意思
 # in 和 not in：判斷元素是否在四種資料結構裡 "a" in [1, 2, 3]
 
+print("============ sort sorted ============")
+# 這兩個方法都有 key 參數可用，裡面要放方法，會在排序前調用這個方法
+s = ["a", "C", "z", "o"]
+# s.sort()
+
+# def xxx(st: str):
+#     return st.lower()
+#
+#
+# s.sort(key=xxx)
+s.sort(key=str.lower)
+print(s)
+
 print("============ 多重賦值-str ============")
 x, y, z = 1, 2.3, "ooo"
 print(x, y)
