@@ -21,7 +21,9 @@ s = ["a", "C", "z", "o"]
 #
 #
 # s.sort(key=xxx)
-s.sort(key=str.lower)
+
+s.sort(key=lambda st: st.lower())
+# s.sort(key=str.lower)
 print(s)
 
 print("============ 多重賦值-str ============")
