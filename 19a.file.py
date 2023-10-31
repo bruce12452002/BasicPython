@@ -77,4 +77,5 @@ print("============ 讀 git 的 hash 檔 ============")
 import zlib
 
 with open("b97155ddcb78999738c8380449abf2fe03c8f3", "rb") as h:
-    print(zlib.decompress(h.read()))  # b'blob 5\x00xxx \n'
+    # b'blob 5\x00xxx \n'，也就是 b'型態 長度\x00內容 \n'
+    print(zlib.decompress(h.read()))

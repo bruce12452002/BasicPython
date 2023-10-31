@@ -78,7 +78,7 @@ while i > 0:
     print("我執行了")
     i -= 1
 
-# 多個 if 之後，將條件改相反即可
+# 多個 if 之後，將條件改相反即可；也可用 not 原條件
 i = 0
 while True:
     print("我執行了")

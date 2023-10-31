@@ -51,41 +51,52 @@ print("============ 捨入模式-x捨y入 ============")
 
 # decimal.ROUND_05UP：假設要取整，整數位為 5 或 0 就進位，但沒小數位不進位(最後連續的0不算)
 
-
-test = Decimal("5.5")
+print("============ 1 ============")
+# 以下測試，Decimal 放字串和浮點，結果相同
+f = 5.5
+test = Decimal(str(f))
 scale = '1.'
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_05UP))  # 6
-print()
+print(round(f))  # 6
 
-test = Decimal("5.55")
+print("============ 2 ============")
+f = 5.55
+test = Decimal(str(f))
 scale = '1.'
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_05UP))  # 6
-print()
+print(round(f))  # 6
 
-test = Decimal("6.5")
+print("============ 3 ============")
+f = 6.5
+test = Decimal(str(f))
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_05UP))  # 6
-print()
+print(round(f))  # 6
 
-test = Decimal("6.51")
+print("============ 4 ============")
+f = 6.51
+test = Decimal(str(f))
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_05UP))  # 6
-print()
+print(round(f))  # 7
 
-test = Decimal("64.52")
+print("============ 5 ============")
+f = 64.52
+test = Decimal(str(f))
 scale = '.0'
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_05UP))  # 64.6
+print(round(f, 1))  # 64.5
 print()

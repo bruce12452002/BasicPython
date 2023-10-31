@@ -16,7 +16,7 @@ print(f"{my_tuple5}, {type(my_tuple5)}")
 print(tuple({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 
 print("============ 多個元素的 tuple ============")
-my_tuple6 = "a", 1, True
+my_tuple6 = "a", 1, True  # 如果用三個變數接，會是三個變數，不是 tuple，不管有沒有加圓括號都一樣
 my_tuple7 = ("a", 1, True)
 my_tuple6a = ["a"], [1], [True]
 my_tuple7a = [["a"], [1], [True]]
