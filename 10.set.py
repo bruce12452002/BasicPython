@@ -26,6 +26,7 @@ print({1}.__hash__)  # set 為 None
 
 print("============ set 元素只可放可 hash 的 ============")
 my_set3 = {()}
+# my_set3 = {([])}  # tuple 裡放不可 hash 的也不行
 print(f"{my_set3}, {type(my_set3)}")
 # my_set4 = {{}}  # TypeError: unhashable
 
@@ -123,7 +124,7 @@ print("============ for + set 裡是集合 ============")
 # set 裡的集合，只能是 tuple
 sett = {("a", "b"), ("c", "d")}
 print(type(sett.pop()))
-for k, v in sett:
+for k, v in sett:  # 如果 tuple 是兩個元素，那就要宣告兩個變數
     print(f"{k}:", v)
 
 print("============ 類別去重 ============")
