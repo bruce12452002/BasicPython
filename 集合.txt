@@ -1,0 +1,35 @@
+list 增加在最後的方法名稱是, append
+list 增加在裡面的方法名稱是, insert
+list 增加多個方法名稱是, extend
+list 刪除元素時，可用 del 關鍵字, y
+list 刪除元素的方法名稱是, remove
+list 刪除元素時，remove 的索引找不到不會報錯, n
+list 清空元素方法名稱是, clear
+list 使用索引修改, y
+list 查詢時方法名稱是, index
+tuple 增加時，可用 add 方法, n
+tuple 增加時，可用 append 方法, n
+tuple 刪除時，可用 del 關鍵字, n
+tuple 刪除時，可用 remove 方法, n
+tuple 修改時，可用索引, n
+tuple 查詢的方法名稱是, index
+tuple 查詢時，可用索引, y
+set 的增加方法名稱是, add
+set 的 discard 方法是修改, n
+set 的 discard 方法是刪除, y
+set 的刪除，key 不存在會報錯的是什麼方法名稱, remove
+set 的刪除，key 不存在「不會」報錯的是什麼方法名稱, discard
+set 的 update 方法，實際上是新增元素, y
+set 的 update 方法是修改元素的值, n
+dict 新增時會覆蓋之前的方法是, KEY
+dict 新增時「不會」覆蓋之前的方法名稱是, setdefault
+dict 刪除時用的是 remove 方法, n
+dict 刪除時用的是 del 方法, y
+dict 刪除時用的是 del 方法, y
+dict 查詢所有 key 用什麼方法名稱, keys
+dict 查詢所有 value 用什麼方法名稱, values
+dict 查詢某個 key 用什麼方法名稱, get
+dict get 方法查不到時會報錯, n
+dict get 方法查不到時「不會」報錯, y
+dict 的 KEY，沒有時新增；有就修改, y
+dict 的 KEY，沒有時會報錯, n
