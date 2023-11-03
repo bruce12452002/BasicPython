@@ -5,7 +5,7 @@
 print("============ 初始化 dict 一 ============")
 my_dict1 = {"k1": 1, "k2": 2}
 my_dict2 = {}
-my_dict3 = dict()  # 裡面的元素不會拆開，用法和 my_dict1 一樣
+my_dict3 = dict()  # 裡面的元素不會拆開，用法和 my_dict1 一樣，key 和 value 都可以不是 iterable
 print(f"{my_dict1}, {type(my_dict1)}")
 print(f"{my_dict2}, {type(my_dict2)}")
 print(f"{my_dict3}, {type(my_dict3)}")

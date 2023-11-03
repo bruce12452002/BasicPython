@@ -21,6 +21,14 @@ set 的刪除，key 不存在會報錯的是什麼方法名稱, remove
 set 的刪除，key 不存在「不會」報錯的是什麼方法名稱, discard
 set 的 update 方法，實際上是新增元素, y
 set 的 update 方法是修改元素的值, n
+set 的聯集 |，對應方法名稱是, union
+set 的聯集 &，對應方法名稱是, intersection
+set 的聯集 -，對應方法名稱是, difference
+set 的聯集 ^，對應方法名稱是, symmetric_difference
+set 的聯集 union，對應符號是, |
+set 的聯集 intersection，對應符號是, &
+set 的聯集 difference，對應符號是, -
+set 的聯集 symmetric_difference，對應符號是, ^
 dict 新增時會覆蓋之前的方法是, KEY
 dict 新增時「不會」覆蓋之前的方法名稱是, setdefault
 dict 刪除時用的是 remove 方法, n
