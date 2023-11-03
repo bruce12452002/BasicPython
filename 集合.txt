@@ -5,7 +5,7 @@ list 刪除元素時，可用 del 關鍵字, y
 list 刪除元素的方法名稱是, remove
 list 刪除元素時，remove 的索引找不到不會報錯, n
 list 清空元素方法名稱是, clear
-list 使用索引修改, y
+list 可用索引修改, y
 list 查詢時方法名稱是, index
 tuple 增加時，可用 add 方法, n
 tuple 增加時，可用 append 方法, n
@@ -40,4 +40,4 @@ dict 查詢某個 key 用什麼方法名稱, get
 dict get 方法查不到時會報錯, n
 dict get 方法查不到時「不會」報錯, y
 dict 的 KEY，沒有時新增；有就修改, y
-dict 的 KEY，沒有時會報錯, n
+dict 的 KEY，沒有時新增；有就報錯, n

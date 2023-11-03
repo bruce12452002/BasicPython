@@ -7,8 +7,12 @@ with open("集合.txt", encoding="UTF-8") as f:
 
 while True:
     n = r.randrange(len(my_list))
-    keyIn = input(my_list[n][0] + ": ")
-    if keyIn.strip().lower() != my_list[n][1].strip().lower():
-        print(f"答錯了！正確答案是: {my_list[n][1].strip()}")
-    else:
+
+    while True:
+        keyIn = input(my_list[n][0] + ": ")
+
+        if keyIn.strip().lower() != my_list[n][1].strip().lower():
+            print(f"答錯了！正確答案是: {my_list[n][1].strip()}")
+            continue
         print("正確！下一題")
+        break
