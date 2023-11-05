@@ -1,8 +1,9 @@
-from oom.test_encapsulate import MyEnc
+from oop.test_encapsulate import MyEnc
 
 
 class MyEnc2(MyEnc):
     pass
+
 
 m = MyEnc2()
 print(m.a)

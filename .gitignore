@@ -2,5 +2,4 @@
 __pycache__/string.cpython-311.pyc
 .DS_Store
 *.iml
-oom/__pycache__/
-my_dir/__pycache__/my_module.cpython-311.pyc
+**/__pycache__/
