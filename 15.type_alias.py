@@ -18,20 +18,27 @@ def xxx(x: str, o: int) -> str:  # -> 為回傳值的alias
 xxx("", 0)
 
 print("============ 聯合別名 ============")
-from typing import Union, Tuple
+# 參數或回傳值，如果想定義多個型態，可用 Union
+# 表示參數或回傳值可以是什麼型態或什麼型態
+from typing import Union
 
 my_tuple2: tuple[int, str, str, int] = (1, "xx", "oo", 89)
 my_tuple3: Union = (1, "xx", "oo", 89)
 my_tuple4: Union[tuple] = (1, "xx", "oo", 89)
 my_tuple5: Union[tuple[int, str, str, int]] = (1, "xx", "oo", 89)
-my_tuple6: Union[tuple[int | str]] = (1, "xx", "oo", 89)
 
 print(my_tuple2)
 
 
-def ooo(x: list[Union[str, int]]) -> Union[tuple[str, int]]:
-    print(ooo.__annotations__)
-    return "xxx", 1
+def yyy(x: int or str) -> str or int:
+    return 1.5
 
 
-ooo([])
+# 回傳值的 Union 有警告
+def zzz(x: Union[int, str]) -> Union[str, int]:
+    return 1.5
+
+
+# 調用方法時不會警告
+yyy(False)
+zzz(False)

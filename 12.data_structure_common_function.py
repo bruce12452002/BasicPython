@@ -113,7 +113,7 @@ def add_score2(s: int):
     return s + 5
 
 
-# print(map(add_score2, scores))
+print(map(add_score2, scores))  # 第一個參數是方法，第二個是要映射的值
 print(list(map(add_score2, scores)))
 print(list(map(lambda s: s + 5, scores)))
 print(tuple(map(lambda s: s + 5 if s < 60 else s, scores)))
