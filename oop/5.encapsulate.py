@@ -1,28 +1,28 @@
 class MyEncapsulate:
-    __field = 1  # 會自動轉成 _類別名稱__欄位名稱，也就是 _MyEncapsulate__field
-    field = 2
-    _field = 3  # 已經是 private，但 python 沒有強制讓實體取不到
+    __field = 1  # 私有屬性
 
     def __function(self):
         print("封裝方法")
 
-    def my_field(self):
-        self.__function()
-        print("field = %d" % self.__field)
-
+    # print 時，會調用 __str__ 方法
     def __str__(self):
-        return f"{self.field} {self.__field}"
+        return f"============ {self.__field} ============"
 
 
 me = MyEncapsulate()
-me.my_field()
-me.field = 999
-me.__field = 999  # 修改無效，但也不報錯
+# print(me.__field)  # 取不到私有屬性
+me.__field = 999  # 這不是修改私有屬性，是動態賦值
+print(me.__field)
 print(me)
-# print(me.__field)  # __ 開頭的是封裝方法和封裝屬性，不可被外部訪問，只能內部使用
+
+print("============ 破解私有屬性 ============")
 # 可以使用 實體._類別名稱(類別私有屬性或類別私有方法)
-# print(me._MyEncapsulate__field)
-# me._MyEncapsulate__function()
+print(me._MyEncapsulate__field)
+me._MyEncapsulate__function()
+
+# 有可修改
+me._MyEncapsulate__field = 11
+print(me._MyEncapsulate__field)
 
 print("============ property ============")
 
@@ -40,6 +40,7 @@ class Animal3:
         if num <= 0:
             raise Exception("num 不可 <= 0")
         self.__num = num
+
     num = property(fget=get_num, fset=set_num)
 
 
