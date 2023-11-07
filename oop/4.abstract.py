@@ -17,11 +17,11 @@ class Animal(abc.ABC):
         print("static method")
 
     @classmethod
-    def my_class_method(cls):  # cls 是一定要的，且一定要在第一個
-        print(f"class method, name={cls.name}")
+    def my_class_method(cls):
+        print("class method")
 
 
-class Monkey(Animal):
+class Monkey(Animal):  # 繼承抽象後，就一定要覆寫方法
     def abs_method(self):
         print("monkey")
 
@@ -33,6 +33,8 @@ class Dog(Animal):
 
 Monkey().abs_method()
 Dog().abs_method()
-# Animal().abs_method()
-Animal.my_static_method()
-Animal.my_class_method()
+# Animal()  # 不可實例化
+
+# @staticmethod、@classmethod 也能取到，當然也能覆寫
+Monkey.my_class_method()
+Dog.my_static_method()
