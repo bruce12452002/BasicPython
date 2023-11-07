@@ -7,9 +7,7 @@
 
 class Animal:
     """動物的類別"""
-    num = None
     name: str = None
-    attack: float = None
 
     @staticmethod  # @開頭的語法在 python 裡，叫裝飾器 decorator
     def my_static_method():
@@ -35,28 +33,3 @@ Animal.name = "monkey"
 Animal.my_class_method()
 a1.my_class_method()
 print(a1.name)  # 被類別影響了
-
-print("============ 修改實體屬性不影響類別屬性 ============")
-a2 = Animal()
-a2.name = "dog"
-a2.my_class_method()  # 實體調用 @classmethod 也不會變 dog
-a1.my_class_method()  # 實體調用 @classmethod 也不會變 dog
-print(a2.name)
-
-print("============ self 屬性和類別屬性名稱一樣時 ============")
-
-
-class Xxx:
-    name = 'xxx'
-
-    def __init__(self, name):
-        self.name = name
-
-
-x = Xxx('aaa')
-# x = Xxx()
-print(x.name, Xxx.name)  # aaa xxx
-Xxx.name = 'ooo'
-print(x.name, Xxx.name)  # aaa ooo，這裡的 aaa 不會被影響是因為 x 取得的 name 是 self 的
-x.name = 'zzz'
-print(x.name, Xxx.name)  # zzz ooo
