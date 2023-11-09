@@ -25,6 +25,10 @@ if aaa == 15 and bbb == 10:
 else:
     print("no")
 
+# 以下兩行一樣
+print(True or False and True)  # True
+print(True or (False and True))  # True
+
 print("============ if 一 ============")
 # 用空格控制
 # 可以寫多行
