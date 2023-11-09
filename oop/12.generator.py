@@ -16,6 +16,8 @@ print(next(b))  # 4
 print("============ yield 寫在方法裡 ============")
 
 
+# 可以寫一些邏輯，然後讓 yield 回傳
+
 def f():
     yield 1  # 使用 yield
     yield 2
@@ -31,3 +33,14 @@ print(next(g))  # 3
 print(next(f()))  # 1
 print(next(f()))  # 1
 print(next(f()))  # 1
+
+print("============ 取所有 yield ============")
+
+
+def xx():
+    yield "a"
+    yield "b"
+    yield "c"
+
+
+print(*xx())
