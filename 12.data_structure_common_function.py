@@ -58,6 +58,13 @@ result = sorted(my_str)
 print(f"{result}, {type(result)}, {my_str}")
 
 print("============ 產生器運算式 ============")
+xxx = (a for a in range(5))
+for i in xxx:
+    print(i, end=" ")
+print('產生器只能跑一次')
+for i in xxx:
+    print(i)
+print("=====")
 # 快速初始化
 my_list = ["ab,c", "d,ef", "ghi"]
 my_set = {"ab,c", "d,ef", "ghi"}

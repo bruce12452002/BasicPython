@@ -25,7 +25,7 @@ if aaa == 15 and bbb == 10:
 else:
     print("no")
 
-# 以下兩行一樣
+# 以下兩行一樣，優先權是 not -> and -> or
 print(True or False and True)  # True
 print(True or (False and True))  # True
 
