@@ -3,6 +3,7 @@ import operator
 # https://docs.python.org/zh-tw/3/library/operator.html#mapping-operators-to-functions
 # and、or(邏輯運算)   &、|、^、~(算術運算)
 # is、is not(比較記憶體)   ==、!=(比較值)
+# is 用在 bool 和 int 時，-5~256 有快取，但要在命令行才看得出來，不包括浮點數，就算 1.0 也是 False
 # 一般工作都是用 and or not == !=
 print("============ 算術運算不等於邏輯運算 ============")
 aaa = 15
