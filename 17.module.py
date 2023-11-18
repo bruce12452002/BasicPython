@@ -44,27 +44,38 @@ module1()
 # module2()
 '''
 print("============ 7-1.檔案 裡的 __all__ ============")
+'''
 from my_package.m2 import *
 
 module2()
 # module4()
+'''
 
 print("============ 7-2.__init__ 檔案 裡的 __all__ ============")
+'''
 from my_package import *
 
 module1()
 module2()
 # module3()
 # module4()
+'''
 
 print("============ 8.同名覆蓋 ============")
-# 不同模組的同名功能，也就是 from 不同，import 相同，會後者蓋前者
-from my_package import *
+# from 不同，import 相同，會後者蓋前者
+from my_package.m1 import module1
+from my_package.m2 import module1
+
+# 如果 import *，找到就會用
+# from my_package.m2 import *
+# from my_package.m1 import *
+
+module1()
 
 print("============ 內鍵模組 ============")
 import time  # 使用 time 模組，裡面的方法都可以使用
-# time.sleep(3)
-# time.localtime()
+time.sleep(3)
+time.localtime()
 
 # from time import sleep  # 使用 time 模組裡面的 sleep 方法，只有 sleep 可以使用
 # sleep(3)
