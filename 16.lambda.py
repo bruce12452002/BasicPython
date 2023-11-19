@@ -28,7 +28,9 @@ fun_param(lambda: "I'm lambda")  # 傳一般方法也是可以的
 
 def fun_param2(h):
     print(type(h))
-    result = h(x=0, y=0)  # x、y 名稱必須和傳進來的 lambda 參數名稱一樣
+
+    # h 調用傳進來的方法，可用 k=v 形式，也可直接給值
+    result = h(x=0, y=0)  # x、y 名稱必須和傳進來的 lambda 參數名稱一樣，否則執行期報錯
     print(result)
 
 

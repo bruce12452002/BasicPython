@@ -110,6 +110,8 @@ def arbitrary_param(*num):
 
 print(arbitrary_param(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 print(arbitrary_param(1, 2, 3))
+my_tuple = 1, 2
+print(arbitrary_param(*my_tuple))  # list 和 set 都會自動轉成 tuple
 
 
 def arbitrary_param(**num):

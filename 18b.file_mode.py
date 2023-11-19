@@ -34,3 +34,4 @@ print('====================')
 with open("download\\2.png", "br") as r:
     with open("download\\2a.png", "bw") as w:
         w.write(r.read())
+        w.flush()

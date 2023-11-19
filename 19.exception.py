@@ -44,7 +44,7 @@ def test_try():
     try:
         print("xx")
         # 1 / 0
-        # return 999  # return 之後會先執行 finally
+        # return 999  # return 之前會先執行 finally
     except ZeroDivisionError as ex:
         print(ex)
     else:
@@ -107,9 +107,9 @@ def f():
 
 try:
     f()
-except* OSError as e:
+except*OSError as e:
     print(f"OSErrors => {e.message}")
-except* SystemError as e:
+except*SystemError as e:
     print(f"SystemErrors => {e.message}")
-except* Exception as e:
+except*Exception as e:
     print(e.message)

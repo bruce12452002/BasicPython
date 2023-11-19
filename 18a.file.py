@@ -20,11 +20,11 @@ print(os.path.isdir(p))
 print("============ 讀檔一 ============")
 read_file = open("test.txt", "r", encoding="UTF-8")
 print(type(read_file))
-# print(file.read(5))  # 讀 5 個 Byte
-# print(file.read())  # 全部讀(從上次讀的地方繼續讀)
+# print(read_file.read(5))  # 讀 5 個 Byte
+# print(read_file.read())  # 全部讀(從上次讀的地方繼續讀)
 
 print(f"{read_file.readline()}")  # 一次讀一行(從上次讀的地方繼續讀)，讀完了再調這個方法也不會報錯，什麼都沒做而已
-# print(f"{file.readlines()}")  # 全部讀(從上次讀的地方繼續讀)
+# print(f"{read_file.readlines()}")  # 全部讀(從上次讀的地方繼續讀)
 for f in read_file:
     print(f, end="")
 # time.sleep(3)  # 睡 3 秒
@@ -65,7 +65,7 @@ with open("test2.txt", "w", encoding="UTF-8") as wf:
 
 print("============ 讀寫檔 ============")
 # with open("test.txt", "a+", encoding="utf-8") as ra:
-#     ra.seek(1)  # 注意非 ASCII 編碼的 Byte 大小
+#     ra.seek(0)  # 注意非 ASCII 編碼的 Byte 大小
 #     print(ra.readline(), end=" ")
 #
 #     ra.seek(13)
