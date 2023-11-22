@@ -1,4 +1,13 @@
 print("============ 自定義模組 ============")
+# import 抓整個資料夾，不包括子資料夾
+# from import 抓資料夾裡的某個函數
+# 資料夾裡的檔案可以寫在 from 或 import
+
+# 假設有父子資料夾，a 和 b
+# import a
+# a.b.xxx 想用 b 裡的方法 xxx，這樣寫是不行的
+# 必需 import a.b，然後再 a.b.xxx
+
 print("============ 1.import ============")
 import my_dir.my_module
 
@@ -73,9 +82,9 @@ from my_package.m2 import module1
 module1()
 
 print("============ 內鍵模組 ============")
-import time  # 使用 time 模組，裡面的方法都可以使用
-time.sleep(3)
-time.localtime()
+# import time  # 使用 time 模組，裡面的方法都可以使用
+# time.sleep(3)
+# time.localtime()
 
 # from time import sleep  # 使用 time 模組裡面的 sleep 方法，只有 sleep 可以使用
 # sleep(3)
@@ -85,7 +94,4 @@ time.localtime()
 # s(3)
 
 # from time import *
-#
-# import my_dir.my_module
-#
-# sleep(3)  # 如果用第 2 行的 import time，必須寫 time.，用這個不用
+# sleep(3)
