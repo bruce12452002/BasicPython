@@ -1,5 +1,8 @@
 import json
 
+# https://www.json.org/json-en.html
+# https://docs.python.org/3/tutorial/stdlib.html
+
 print("============ loads、dumps  ============")
 # dumps：物件轉 str； loads：str 轉 list
 data = [{"name": "孫悟空", "attack": 90}, {"name": "牛魔王", "attack": 85}, {"name": "如來佛", "attack": 1000}]
