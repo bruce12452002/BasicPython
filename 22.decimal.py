@@ -10,9 +10,9 @@ f1 = 0.1
 f2 = 0.2
 print(Decimal.from_float(f1))
 print(Decimal(f1) + Decimal(f2))
-getcontext().prec = 3  # 保留幾位小數，預設 28，Decimal 運算過後才有效果
+getcontext().prec = 3  # 全部有幾位(不包括.)，預設 28，Decimal 運算過後才有效果
 getcontext().rounding = ROUND_HALF_UP  # 預設是 ROUND_HALF_EVEN
-print(Decimal("2.2222") + Decimal("3.3333"))  # prec = 3 會是 5.555，然後再做捨入，若是四捨五入則為 5.56
+print(Decimal("2.222") + Decimal("3.333"))  # 因為 prec = 3 會是 5.555 之後，然後再做捨入
 f1f2 = Decimal(f1) + Decimal(f2)
 print(f1f2)
 print(f1f2.normalize())  # 將後面的 0 刪除
@@ -66,6 +66,7 @@ print("============ 2 ============")
 f = 5.55
 test = Decimal(str(f))
 scale = '1.'
+print(test.quantize(Decimal(scale)))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6

@@ -4,7 +4,7 @@ import json
 # https://docs.python.org/3/tutorial/stdlib.html
 
 print("============ loads、dumps  ============")
-# dumps：物件轉 str； loads：str 轉 list
+# dumps：list 轉 str； loads：str 轉 list
 data = [{"name": "孫悟空", "attack": 90}, {"name": "牛魔王", "attack": 85}, {"name": "如來佛", "attack": 1000}]
 my_json = json.dumps(data)
 print(f"{my_json}, {type(my_json)}")
@@ -37,4 +37,4 @@ with open("read_json.txt", "r", encoding="UTF-8") as read_file:
     print(json.load(read_file))
 
 with open("write_json.txt", "w", encoding="UTF-8") as write_file:  # 檔案不用先存在
-    print(json.dump(["apple", "banana", "strawberry"], write_file))
+    print(json.dump(["apple", "banana", "strawberry"], fp=write_file))
