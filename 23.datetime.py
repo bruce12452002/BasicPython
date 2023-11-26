@@ -29,6 +29,7 @@ time1 = time.strptime("2020/10/01 15:26:37.123456", "%Y/%m/%d %H:%M:%S.%f")  # s
 print(time.strftime("%Y-%m-%d %H:%M:%S", time1))  # strftime -> str from time
 
 # 時間轉時間戳
+# https://zh.wikipedia.org/zh-tw/2038%E5%B9%B4%E9%97%AE%E9%A2%98
 timestamp = int(time.mktime(time1))
 print(timestamp)
 
