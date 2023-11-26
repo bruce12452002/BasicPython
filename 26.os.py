@@ -2,15 +2,15 @@ import os
 from os import path
 
 print("============ 列出目錄結構 ============")
-print(os.getcwd())  # 回傳當前目錄
-print(os.listdir())  # 回傳當前「目錄」下的檔案和目錄
+# print(os.getcwd())  # 回傳當前目錄
+# print(os.listdir())  # 回傳當前「目錄」下的檔案和目錄
 
 
-p = "/Users/bruce"
+p = "D:/ooo"
 # print(os.listdir(p))  # 給路徑，回傳「這一層」的目錄和檔案，路徑不存在「會」報錯
-#
-# for p, d, f in os.walk(p):  # 給路徑，回傳「多」層的目錄和檔案，路徑不存在「不會」報錯
-#     print(f"path={p}, directory={d}, file={f}")
+
+for p, d, f in os.walk(p):  # 給路徑，回傳「多」層的目錄和檔案，路徑不存在「不會」報錯
+    print(f"path={p}, directory={d}, file={f}")
 
 print("============ 增加/刪除空目錄 ============")
 p2 = "/a"
