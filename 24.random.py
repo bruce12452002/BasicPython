@@ -24,6 +24,7 @@ random.shuffle(my_list)
 print(my_list)
 
 print("============ sample，回傳 list ============")
+# 不重覆指的是索引不重覆
 print(random.sample("abcde", 3))  # 從 a~e 隨機產生不重覆的 3 個，超過 5 會報錯
 print(random.sample(["a", 'b', "c", 'd', "e"], 3))
 print(random.sample(("a", 'b', "c", 'd', "e"), 3))

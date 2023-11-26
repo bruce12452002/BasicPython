@@ -47,7 +47,7 @@ print(path.abspath(".."))  # 給相對路徑或絕對路徑，回傳絕對路徑
 print("============ 檔案或目錄 ============")
 for d in os.listdir():
     if path.isdir(d):
-        print(f"dir={d}, {path.getsize(d)}")  # getsize，單位為 bit
+        print(f"dir={d}, {path.getsize(d)}")  # getsize，單位為 Byte
     elif path.isfile(d):
         print(f"file={d}, {path.getsize(d)}")
 
