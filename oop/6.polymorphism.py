@@ -1,16 +1,15 @@
 class Animal:
-    def move(self):  # 方法內容為 pass，所以叫抽象方法，所在的類別叫抽象類別
-        pass
+    def move(self):
+        print("---")
 
 
 class Dragon(Animal):
-    def move(self):
-        print("fly")
+    pass
 
 
-class Dog(Animal):
-    def move(self):
-        print("run")
+class Snack(Dragon):
+    def move(self)
+        print("crawl")
 
 
 def start(a: Animal):
@@ -18,4 +17,6 @@ def start(a: Animal):
 
 
 start(Dragon())
-start(Dog())
+start(Snack())
+
+# 父类的方法，子类如果有，就用，没有就一层一层往上找，所以父类一定要有方法
