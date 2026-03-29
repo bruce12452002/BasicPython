@@ -66,7 +66,9 @@ c = """
 abc
     123
     """  # 注意 """ 左邊的空格
-d = '"yeah"'  # 跳脫字元 \
+d = '''abc
+    123
+'''
 print(a, b, c, d)
 
 print("============ 註解 ============")
@@ -103,7 +105,7 @@ my_string = "abc apple"
 print(my_string.upper())
 print(my_string.lower())
 print(my_string.capitalize())
-print(my_string.title(), my_string.istitle())  # 多個 capitalize，如果是就是 True
+print(my_string.title(), "=>", my_string.istitle(), my_string.title().istitle())  # 多個 capitalize，如果是就是 True
 print(my_string)
 
 print(my_string[-1])
@@ -131,7 +133,7 @@ print(my_string3.removesuffix("ab"))  # 字串結尾是 ab 會刪除
 
 print("============ Unicode Code ============")
 a = ord('一')
-print(a, '{:x}'.format(a), chr(a))
+print(a, '{:x}'.format(a), chr(a)) # :x 轉換成 16 進制
 
 print("============ 運算元優先級 ============")
 # https://docs.python.org/zh-tw/3/reference/expressions.html#operator-precedence

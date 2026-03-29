@@ -7,11 +7,7 @@ print("============ 字串格式化一 printf style ============")
 # %f 預設小數 6 位，如果想將後面的 0 去掉，可用 %g
 # https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
 
-print("Hello! %s")
-# print("Hello! %" % ("world"))
-print("Hello! %s" % ("%"))  # 只有一個參數可省略圓括號
-
-e = "Hello! %s" % "world"
+e = "Hello! %s" % ("world") # 只有一個參數可省略圓括號
 print(e)
 f = "%s %s" % ("Haha!", e)
 print(f)
@@ -30,9 +26,9 @@ j = 1.111
 k = 56
 print(F"hello {i}, {j} {k}, {type(k)}")  # 變數裡可運算
 
-# :後面還可以接變數；但:前面就不可以，:後面的意思要看下面的字串格式化三
+# :後面還可以接變數；但:前面就不可以
 m = 5
-print(f"{k:^{m}}")
+print(f"{k:^{m}}") # 總共佔 5 格的意思，^ 表示置中，其他要看下面的「字串格式化三-對齊」
 
 # 多行可用 \ 換行，指的是編輯時換行，不是輸出後的換行
 print(f"abc{i}, \
@@ -49,22 +45,26 @@ print("============ 字串格式化三 format方法 ============")
 # 參考 https://docs.python.org/3/library/stdtypes.html#str.format
 print('1.{1} and {0} and {0}'.format('aaa', 'bbb'))  # 手動指定第幾個參數
 
-# 依參數名稱賦值，k=v 一律放在最後面，不可穿插在中間
+# 依參數名稱賦值，k=v 只能放在最後面
 print('2.{fa} and {fb} and {0} or {fa}'.format("ccc", fa='aaa', fb='bbb'))
 
 # 參數自動依照順序
-print('3.{} and {} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和花括號相等
+print('3.{} and {} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數一定要和花括號相等
 
 # 自動和手動不可放在一起，但自動和手動可和參數名稱混合
 # print('4.{} and {0} and {}'.format('aaa', 'bbb', 'ccc'))  # 參數個數要和 {} 相等
-# :開頭，如果傳進來的參數位數 > 設定的位數，設定會失效，不會報錯
-# :左邊有數字表示第幾個參數，不寫預設為 0
-# :前為參數的索引，後面的順序為：補對號長轉(補票、對號入座，票很長可以轉)，補滿、對齊、正負號、逗號、長度、轉進制
+print('4.{xx} and {} and {yy}'.format('aaa', xx='bbb', yy='ccc'))
+print('4.{} and {yy} and'.format('aaa', xx='bbb', yy='ccc'))
 
 print("============ 字串格式化三-數字補滿 ============")
+#格式為 {[參數索引]:[補滿][<^>左中右對齊][長度]}
+# 參數不寫預設為第 0 個參數
+# :後面的順序為：補滿、對齊、正負號、逗號、長度、轉進制，記法為 補對號長轉(補票、對號入座，票很長可以轉)
+print('{:>7d}'.format(987))
 print('{:0>7d}'.format(987))
 print('{:#<7d}'.format(987))
 print('{:x<7.1f}'.format(987.2418))
+print('{1:>7d}'.format(987, 654))
 
 print("============ 字串格式化三-對齊 ============")
 print('{:<9}'.format(12.3))  # 靠左對齊
