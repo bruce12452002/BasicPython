@@ -8,7 +8,9 @@ print(f"{my_tuple2}, {type(my_tuple2)}")
 
 print("============ 一個元素的 tuple ============")
 my_tuple3 = tuple("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
-# my_tuple4 = (False)  # 這樣子還是 bool 型態
+# tuple("a", 1, True)  # tuple 建構子最多只能有 1 個參數
+print(tuple(range(10)))  # 0~9
+# my_tuple4 = (False)  # 這樣子還是 bool 型態，因為圓括號無法識別是不是 tuple
 my_tuple5 = (False,)  # 這樣子才是 tuple 型態，可不用圓括號
 print(f"{my_tuple3}, {type(my_tuple3)}")  # 會拆開成三個元素
 # print(f"{my_tuple4}, {type(my_tuple4)}")
@@ -16,25 +18,24 @@ print(f"{my_tuple5}, {type(my_tuple5)}")
 print(tuple({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 
 print("============ 多個元素的 tuple ============")
-my_tuple6 = "a", 1, True  # 如果用三個變數接，會是三個變數，不是 tuple，不管有沒有加圓括號都一樣
+# 超過一個值用一個變數接，都是 tuple，不管有沒有加圓括號都一樣
+my_tuple6 = "a", 1, True  # 如果用一個變數接是 tuple；但是用三個變數接，會是三個變數，不是 tuple，不管有沒有加圓括號都一樣
 my_tuple7 = ("a", 1, True)
 my_tuple6a = ["a"], [1], [True]
 my_tuple7a = [["a"], [1], [True]]
 print(type(my_tuple6a), type(my_tuple7a))  # tuple list
 
-# my_tuple8 = tuple("a", 1, True)  # tuple() 多了 tuple 關鍵字，這時裡面只能是 0 或 1 個元素
 print(f"{my_tuple6}, {type(my_tuple6)}")
 print(f"{my_tuple7}, {type(my_tuple7)}")
-# print(f"{my_tuple8}, {type(my_tuple8)}")
 # my_tuple7[0] = "b"  # TypeError: 'tuple' object does not support item assignment
 my_tuple7 = "haha"  # 內容不可變，但可以將整個變數指向的記憶體改掉
 print(f"my_tuple7 = {my_tuple7}, {type(my_tuple7)}")
 
 print("============ 常用方法 ============")
 my_tuple8 = 1.1, False, "hehe", 1.1, "haha", 1.1
-print(my_tuple8.index("hehe"))  # 給 key 回傳索引值，找不到會報錯
-# 要注意 key 是 bool 時，可以找到 0、0.0、False、1、1.0、True
-# 0 表示 False；1 表示 True，會從最左邊開始找，找到就會回傳索引值
+print(my_tuple8.index("hehe"))  # 給 key 並回傳索引值，找不到會報錯
+# 要注意 key 是 bool 時，可以找到 0、0.0、False，但不包括空集合，如 []、{}
+print((1, 0.0, False).index(False))
 
 print(my_tuple8.count(1.1))  # 找不到為 0
 print(my_tuple8[0])
@@ -49,8 +50,7 @@ print(my_tuple_tuple[0][1])
 print(my_tuple_tuple[1][0])
 print(my_tuple_tuple[2][0])
 # print(my_tuple_tuple[3])  # IndexError: tuple index out of range
-# my_tuple_tuple[0][1] = 4
-# print(my_tuple_tuple)  # TypeError: 'tuple' object does not support item assignment
+# my_tuple_tuple[0][1] = 4 # TypeError: 'tuple' object does not support item assignment
 my_tuple_tuple[2][0] = False  # tuple 裡有 list，list 是可變的，所以可以修改
 print(my_tuple_tuple[2])
 

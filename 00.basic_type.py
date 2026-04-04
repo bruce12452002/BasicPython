@@ -88,11 +88,12 @@ print(True + 1, False + 2.3)  # 布林可加減，False 為 0；True 為 1
 print("============ 轉布林 ============")
 print(bool(0.0))
 print(bool(0))
+print(bool(False))
 print(bool(""))  # bool("False") 仍然是 True
 print(bool(None))
-print(bool(()))
-print(bool([]))
-print(bool({}))
+print(bool(())) # tuple()
+print(bool([])) # list()
+print(bool({})) # dict()
 print(bool(set()))
 print("以上都是 False，其他都是 True")
 print(bool({None: None}))  # True，bool({False, False})、bool({"", ""}) 也算 True

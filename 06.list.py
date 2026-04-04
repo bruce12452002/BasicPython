@@ -3,8 +3,9 @@
 
 print("============ 初始化 list 一 ============")
 a = list("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
-# a = list(1)  # is not iterable
+# a = list(1)  # is not iterable, 數字、浮點數、布林都不是 iterable，看 07.iterable.py
 print(f"{a}, {type(a)}")  # 會拆開成三個元素
+# list("a", 1, True)  # list 建構子最多只能有 1 個參數
 print(list(range(10)))  # 0~9
 
 print("============ 初始化 list 二 ============")
@@ -26,6 +27,8 @@ print("============ 常用方法-查詢 ============")
 list2_index = myList2.index(False)  # 取得第一次得到的索引值，因為 list 可重覆
 print(f"list2.index={list2_index}")
 # list2_index_error = myList2.index("xxx")  # 找不到報錯
+# 要注意 key 是 bool 時，可以找到 0、0.0、False，但不包括空集合，如 []、{}
+print([1, 0.0, False].index(False))
 
 e = myList2.pop(-1)  # 將元素取出並刪除，如果 pop 不給參數，就是刪最後一個，也就是 stack 的功能
 print(myList2)
@@ -143,10 +146,9 @@ lists = [{"a", "b"}, {"c", "d"}]
 listt = [("a", "b"), ("c", "d")]
 listl = [["a", "b"], ["c", "d"]]
 
-# k, v 是兩個變數，所以集合裡都得是兩個
+# 如果 for 迴圈給 k, v 是兩個變數，所以集合裡都得是兩個； 如果給三個變數，集合裡就得是三個，依此類推
 # 注意 dict，只會取得 key，k-v 算一組，會取第一組的 key 和第二組的 key
-# 如果是三個變數，那就需要三組，太多或太少都會報錯
-# 注意 set 的值，key value 有可能會調換
+# 注意 set 的值，同一個 index 的 key value 有可能會調換
 for k, v in listl:
     print(f"{k}:", v)
 
@@ -183,5 +185,5 @@ print("============ 雙向佇列 ============")
 from collections import deque
 
 queue = deque(["Eric", "John", "Michael"])
-queue.popleft()  # 只用 popleft 為佇列的功能，先進先出
+queue.popleft()  # 如果只用 popleft 的話，為佇列的功能，先進先出
 print(queue)
