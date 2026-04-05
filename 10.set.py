@@ -3,13 +3,14 @@
 
 print("============ 初始化 set ============")
 my_set1 = {1, 3, 5, 7, 9, 7, 5, 3, 1}  # {} 表示 dict，不是空 set
-my_set2 = set("abc")  # 會拆開成三個元素； set() 是空 set； 這種方式初始化，只能是 0 或 1 個元素
+my_set2 = set("abc")  # 會拆開成三個元素； 這種方式初始化，只能是 0 或 1 個元素
 print(f"{my_set1}, {type(my_set1)}")
 print(f"{my_set2}, {type(my_set2)}")
 print(set({"abc": "ddd"}))  # 只會有 key，key 不會拆開
 print({"abc": "ddd"})  # 上行的推薦寫法會變成 dict，不是 set
 
 print("============ 可 hash ============")
+# 不可變才能 hash
 digit = 1
 my_float = 2.3
 boolean = True
@@ -17,16 +18,16 @@ print(digit.__hash__())
 print(my_float.__hash__())
 print(boolean.__hash__())
 print("".__hash__())
-print(().__hash__())
-# 以上的值都不可變
+print(().__hash__()) # 因為不能增刪改，所以可 hash
+# 以上的值都不可變，所以才能 hash
 
-# print([].__hash__())  # list 報錯
+print([].__hash__)  # list 報錯
 print({}.__hash__)  # dict 為 None
 print({1}.__hash__)  # set 為 None
 
 print("============ set 元素只可放可 hash 的 ============")
 my_set3 = {()}
-# my_set3 = {([])}  # tuple 裡放不可 hash 的也不行
+# my_set3 = {([])}  # 不可放非 hash 的
 print(f"{my_set3}, {type(my_set3)}")
 # my_set4 = {{}}  # TypeError: unhashable
 

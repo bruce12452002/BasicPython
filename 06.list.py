@@ -73,9 +73,18 @@ print("============ 轉換 ============")
 myList2 = [1, 2, 3]
 s1 = set(myList2)
 s2 = tuple(myList2)
+s3 = list(myList2)
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+print(f"{s3}, {type(s3)}")
 # dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
+s4 = set({"k":"v", "k2": "v2"})
+s5 = tuple({"k":"v", "k2": "v2"})
+s6 = list({"k":"v", "k2": "v2"})
+print(f"{s4}, {type(s4)}")
+print(f"{s5}, {type(s5)}")
+print(f"{s6}, {type(s6)}")
+
 
 print("============ list 產生器 ============")
 print(list(i + 1 for i in range(10)))  # 1~10

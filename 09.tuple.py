@@ -57,8 +57,10 @@ print(my_tuple_tuple[2])
 print("============ 轉換 ============")
 s1 = list(my_tuple_tuple[0])
 s2 = set(my_tuple_tuple[0])
+s3 = tuple(my_tuple_tuple[0])
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+print(f"{s3}, {type(s3)}")
 # dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
 
 print("============ loop + tuple ============")
@@ -122,8 +124,8 @@ tuples = ({"a", "b"}, {"c", "d"})
 tuplet = (("a", "b"), ("c", "d"))
 tuplel = (["a", "b"], ["c", "d"])
 
-# k, v 是兩個變數，所以集合裡都得是兩個
-# 注意 dict，只會取得 key，會 key 的長度，如果是 2 長，就可用 2 個變數
-# 注意 set 的值，key value 有可能會調換
+# 如果 for 迴圈給 k, v 是兩個變數，所以集合裡都得是兩個； 如果給三個變數，集合裡就得是三個，依此類推
+# 注意 dict，只會取得 key，k-v 算一組，會取第一組的 key 和第二組的 key
+# 注意 set 的值，同一個 index 的 key value 有可能會調換
 for k, v in tuplel:
     print(f"{k}:", v)
