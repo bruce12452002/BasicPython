@@ -25,7 +25,8 @@ print(f"{d3}, {type(d3)}", end=" ")
 print()
 
 dt = {'sep': ',', 'end': '\n\n'}
-print('hello', 'world', **dt)
+print('hello', 'world', **dt) # 修改 sep 和 end 的預設值
+print(*dt.items())
 
 print("============ dict 可嵌套、可巢狀 ============")
 sango = {
@@ -50,14 +51,15 @@ print(my_dict3)
 my_dict3.setdefault("a", 1)  # 如果 key 沒有才新增, 這行還沒有1，所以會新增進去，且回傳值為 1
 kk = my_dict3.setdefault("a", 100)  # 因為已經有 a 了，所以不會新增成功，回傳值為目前已有的值 1
 my_dict3.setdefault("b")  # 只有一個參數時，value 為 None
-my_dict3['c'] = 'xxx'
+my_dict3['c'] = 'xxx'  # key 沒有就增加，有就修改
 print(my_dict3, kk)
 
-# 從其他資料結構轉成 dict，如果有第二個參數為 key 的 value
+# 從其他資料結構轉成 dict，預設 value 都是 None，加第二個參數可改變 value
+# fromkeys 只有 key，除非加第二個參數
 print(dict.fromkeys(["a", "b"]))
 print(dict.fromkeys(("a", "b")))
 print(dict.fromkeys({"a", "b"}, 100))
-print(dict.fromkeys(my_dict3))  # 原本已有的 dict 的 key，value 是 None
+print(dict.fromkeys(my_dict3))
 
 print("============ 常用方法-修改 ============")
 my_dict4 = {"k1": 100, "k2": 20}
@@ -65,7 +67,7 @@ my_dict4["k3"] = 300  # key 沒有就增加，有就修改
 my_dict4["k2"] = 200  # key 沒有就增加，有就修改
 print(my_dict4)
 my_dict4_b = dict(k2=2000, k4=40)
-my_dict4.update(my_dict4_b)  # 將右邊的 dict 覆蓋到左邊的 dict
+my_dict4.update(my_dict4_b)  # 將右邊的 dict 加到左邊，已有的 key 會覆蓋，沒有的 key 會新增
 print(my_dict4)
 
 print("============ 常用方法-查詢 ============")
