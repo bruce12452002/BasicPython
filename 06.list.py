@@ -70,7 +70,7 @@ myList5 = [7, 6.2, 5, 4.5]
 print(sum(myList5), max(myList5), min(myList5))  # 只支援數字和浮點數
 
 print("============ 轉換 ============")
-myList2 = [1, 2, 3]
+myList2 = [1, 2, 3, (4, 5, 'a')]
 s1 = set(myList2)
 s2 = tuple(myList2)
 s3 = list(myList2)

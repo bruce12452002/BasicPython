@@ -57,13 +57,12 @@ my_set2.clear()
 print(my_set2)
 
 print("============ 元素是數字時，感覺像有序的 ============")
-# 官方在 3.x 某一版有改過裡面的算法，都是數字時，每次都是一樣的
-# 但官方並沒說是有序的，哪天它想改就改了
+# 官方並沒說是有序的, 有些型態會有隨機種子的 hash，所以每次都不一樣，但數字和浮點數相對穩定
 # https://docs.python.org/3/tutorial/datastructures.html#sets
-# 目前發現只有數字和浮點數會這樣
 s = {5, 6, 4, 2, 1, 8, 7}
 # s = {1, 3, 122, 6, 2, 4, 3, 1, 2, 22, 34, 22, 99, 200}
 print(s)
+print(sorted(s)) # 可用 sorted 來排序
 
 print("============ set 運算-str ============")
 # 聯集 union，等同 |
@@ -110,21 +109,25 @@ print(diff2.issuperset(diff1))
 print(diff2 >= diff1)
 
 print("============ 轉換 ============")
-my_set2 = {1, 2, 3}
+my_set2 = {1, 2, 3, (4, 5, 'a')}
 s1 = list(my_set2)
 s2 = tuple(my_set2)
+s3 = set(my_set2)
 print(f"{s1}, {type(s1)}")
 print(f"{s2}, {type(s2)}")
+print(f"{s3}, {type(s3)}")
 # dict 不可轉換成 list、tuple、set，但相反可以，但只取的到 key
 
 print("============ for + set ============")
+print(f"new_diff2 = {new_diff2}")
 for e in new_diff2:
     print(e)
 
 print("============ for + set 裡是集合 ============")
-# set 裡的集合，只能是 tuple
+# set 裡的集合，因為 hash 的關係只能是 tuple
 sett = {("a", "b"), ("c", "d")}
 print(type(sett.pop()))
+print(sett)
 for k, v in sett:  # 如果 tuple 是兩個元素，那就要宣告兩個變數
     print(f"{k}:", v)
 
@@ -145,9 +148,9 @@ class Cat:
 
 c1 = Cat(22, "kiki")
 c2 = Cat(55, "kaka")
-c3 = Cat(22, "mimi")
+c3 = Cat(22, "mimi") # 22 已加入過
 c4 = Cat(66, "haha")
-c5 = Cat(22, "kuku")
+c5 = Cat(22, "kuku") # 22 已加入過
 s = {c1, c2, c3, c4, c5}
 for i in s:
     print(f"{i.name}, {i.num}")
