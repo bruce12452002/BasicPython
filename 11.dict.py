@@ -108,14 +108,14 @@ for k, v in my_dict4.items():
 print()
 
 print("============ 以下用法了解即可，很少用 ============")
-for d in my_dict4:  # 只會遍歷 key
+for d in my_dict4:  # 只會遍歷 key，等同 keys()
     print(d, end=" ")
 print()
-
+print("===")
 for k1a, k1b in my_dict4:  # k1 和 k2 都是 2 長，所以可用兩個變數加；如果 3 長就用 3 個變數接
     print(f"{k1a}:", k1b, end=" ")
 print()
-
+print("===")
 for kv in my_dict4.items():
     print(kv)
     print(kv[0], kv[1], sep="=")

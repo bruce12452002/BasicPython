@@ -30,6 +30,7 @@ print(f"list2.index={list2_index}")
 # 要注意 key 是 bool 時，可以找到 0、0.0、False，但不包括空集合，如 []、{}
 print([1, 0.0, False].index(False))
 
+# pop 方法如果沒有對應的索引值會報錯
 e = myList2.pop(-1)  # 將元素取出並刪除，如果 pop 不給參數，就是刪最後一個，也就是 stack 的功能
 print(myList2)
 print(e)

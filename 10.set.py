@@ -33,6 +33,7 @@ print(f"{my_set3}, {type(my_set3)}")
 
 print("============ 常用方法-查詢 ============")
 print(5 in my_set1)
+# pop 方法如果沒有對應的索引值會報錯
 new_my_set = my_set1.pop()  # 取第一個元素並刪除，但 set 並無順序，加入時不曉得誰會在第一個
 print(new_my_set)
 
@@ -49,6 +50,7 @@ my_set2.update({1: "xxx", "a": "bbb"})  # 資料結構是 dict 只取 key
 print(my_set2)
 
 print("============ 常用方法-刪除 ============")
+# del my_set2 # 無法刪除其中一個元素，只能刪除變數
 my_set2.remove("a")  # 元素必需存在，否則報錯
 my_set2.discard("a")  # 元素不存在也不會報錯
 print(my_set2)
