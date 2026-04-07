@@ -3,28 +3,67 @@
 # max()　最大值，只支援數字和浮點數，dict 只會抓 key
 # min()　最小值，只支援數字和浮點數，dict 只會抓 key
 # sum()  加總，只支援數字和浮點數，dict 只會抓 key
-# list() 轉 list，可以自己轉自己，dict 只會保留 key，字串會每個字分開
-# tuple() 轉 tuple，可以自己轉自己，dict 只會保留 key，字串會每個字分開
-# str() 轉 string，可以自己轉自己，dict 「會」保留 key-value
-# set() 轉 set，可以自己轉自己，dict 只會保留 key，字串會每個字分開
-# 無法轉 dict，因為 dict 要 k-v pair
-# + 和 *：只支援 list 和 tuple，在最後增加元素和元素增加幾倍的意思
-# in 和 not in：判斷元素是否在四種資料結構裡 "a" in [1, 2, 3]
 
-print("============ sort sorted ============")
-# 這兩個方法都有 key 參數可用，裡面要放方法，會在排序前調用這個方法
-s = ["a", "C", "z", "o"]
-# s.sort()
+l = [3, 2, 1]
+s = {3, 2, 1}
+d = {3:'c', 2: 'b', 1:'a'}
+st = '321'
+t = (3, 2, 1)
 
-# def xxx(st: str):
-#     return st.lower()
-#
-#
-# s.sort(key=xxx)
-
-s.sort(key=lambda st: st.lower())
-# s.sort(key=str.lower)
+print('============ len ============')
+print(len(l))
+print(len(s))
+print(len(d))
+print(len(st))
+print(len(t))
+print('============ max ============')
+print(max(l))
+print(max(s))
+print(max(d))
+print(max(st))
+print(max(t))
+print('============ min ============')
+print(min(l))
+print(min(s))
+print(min(d))
+print(min(st))
+print(min(t))
+print('============ sum ============')
+print(sum(l))
+print(sum(s))
+print(sum(d))
+# print(sum(st)) # 字串無法加總
+print(sum(t))
+print('============ sorted ============')
+# sorted 「不會」變動原來的資料，且型態都會變成 list
+# 倒序可加參數 reverse=True
+sl = sorted(l)
+ss = sorted(s)
+sd = sorted(d)
+sst = sorted(st)
+st2 = sorted(t)
+print('原本的資料')
+print(l)
 print(s)
+print(d)
+print(st)
+print(t)
+print('排序過後的資料')
+print(sl, type(sl))
+print(ss, type(ss))
+print(sd, type(sd))
+print(sst, type(sst))
+print(st2, type(st2))
+print('============ sort ============')
+# sorted 「會」變動原來的資料，但只有 list 有這個方法
+# 倒序可加參數 reverse=True
+l.sort()
+# s.sort()
+# d.sort()
+# st.sort()
+# t.sort()
+print(l)
+
 
 print("============ 多重賦值-str ============")
 x, y, z = 1, 2.3, "ooo"
@@ -43,20 +82,6 @@ print(x, y)
 x, *y = myList1
 print(x, y)
 
-print("============ 排序 ============")
-# sorted 排序過後，不會變動原來的資料結構，且型態都會變成 list
-my_list = [9, 1, 5, 73, 7, 88]
-result = sorted(my_list)
-print(f"{result}, {type(result)}, {my_list}")
-
-my_tuple = (9, 1, 5, 73, 7, 88)
-result = sorted(my_tuple, reverse=True)  # 倒序
-print(f"{result}, {type(result)}, {my_tuple}")
-
-my_str = "一二三四五六"
-result = sorted(my_str)
-print(f"{result}, {type(result)}, {my_str}")
-
 print("============ 產生器運算式 ============")
 xxx = (a for a in range(5))
 for i in xxx:
@@ -65,7 +90,7 @@ print('產生器只能跑一次')
 for i in xxx:
     print(i)
 print("=====")
-# 快速初始化
+# 初始化
 my_list = ["ab,c", "d,ef", "ghi"]
 my_set = {"ab,c", "d,ef", "ghi"}
 my_tuple = ("ab,c", "d,ef", "ghi")
@@ -79,56 +104,14 @@ print(tuple(b for li in my_set for b in li.split(",")))
 print(list(b for li in my_tuple for b in li.split(",")))
 print(set(a for li in my_tuple for a in li.split(",")))
 
-# 快速加總
-print(sum(i * 2 for i in range(10)))
+# 加總
+print(sum(i * 2 for i in range(3)))
 
 a_data = [5, 6, 7]
 b_data = [3, 4, 5]
-print(sum(i * j for i, j in zip(a_data, b_data)))
-
-
-# 快速取最大、最小
-class Animal:
-    def __init__(self, num, name):
-        self.num = num
-        self.name = name
-
-
-my_animal = [Animal(50, "五十"), Animal(7, "七"), Animal(24, "二十四")]
-print(max((a.num, a.name) for a in my_animal))
-print(min((a.num, a.name) for a in my_animal))
+# zip 方法可以把多個「可迭代物件」一一對應打包在一起 [(5, 3), (6, 4), (7, 5)]
+print(sum(i * j for i, j in zip(a_data, b_data))) #  5*3 + 6*4 + 7*5
 
 # 快速倒取並放在複合型態裡
 data = "abcde"
 print(tuple(data[i] for i in range(len(data) - 1, -1, -1)))
-
-print("============ map ============")
-scores = [50, 70, 90, 28]
-
-
-def add_score(scores: list):
-    result = []
-    for s in scores:
-        result.append(s + 5)
-    return result
-
-
-print(add_score(scores))
-
-
-def add_score2(s: int):
-    return s + 5
-
-
-print(map(add_score2, scores))  # 第一個參數是方法，第二個是要映射的值
-print(list(map(add_score2, scores)))
-print(list(map(lambda s: s + 5, scores)))
-print(tuple(map(lambda s: s + 5 if s < 60 else s, scores)))
-
-# 例二
-students_scores = [('孫悟空', 50), ('牛魔王', 70), ('豬八戒', 90)]
-print(list(map(lambda s: s[1], students_scores)))
-
-print("============ filter ============")
-print(list(filter(lambda s: s < 60, scores)))
-print(set(map(lambda s: s + 5, filter(lambda s: s < 60, scores))))

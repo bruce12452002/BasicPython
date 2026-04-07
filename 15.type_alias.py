@@ -10,7 +10,7 @@ my_tuple: tuple[int, bool, str] = (1, True, "xx")
 my_dict: dict[int, str] = {1: "a"}
 
 
-def xxx(x: str, o: int) -> str:  # -> 為回傳值的alias
+def xxx(x: str, o: int) -> str:  # -> 為回傳值的 alias
     print(xxx.__annotations__)  # 如果有別名會印出別名資訊
     return "xxx"
 
@@ -19,7 +19,7 @@ xxx("", 0)
 
 print("============ 聯合別名 ============")
 # 參數或回傳值，如果想定義多個型態，可用 Union
-# 表示參數或回傳值可以是什麼型態或什麼型態
+# 表示參數或回傳值可以是什麼型態或回傳值
 from typing import Union
 
 my_tuple2: tuple[int, str, str, int] = (1, "xx", "oo", 89)

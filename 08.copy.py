@@ -56,12 +56,13 @@ print("============ 深複製 ============")
 import copy
 
 # 記憶體位址再複製時就不一樣了
+data = [[False, 1, 2.3, "4", [5, 6], (7, 8), {9, 10}, {"k": 11}]]
 deep_clone = copy.deepcopy(data)
 
 print("============ 深複製測 bool ============")
 print(deep_clone[0][0] is data[0][0])
 print(f"原本兩個是 {data[0][0]}, {deep_clone[0][0]}")
-deep_clone[0][0] = False
+deep_clone[0][0] = True
 print(f"修改後是 {data[0][0]}, {deep_clone[0][0]}")
 print(deep_clone[0][0] is data[0][0], deep_clone is data)
 
@@ -87,7 +88,7 @@ print(f"修改後是 {data[0][3]}, {deep_clone[0][3]}")
 print(deep_clone[0][3] is data[0][3], deep_clone is data)
 
 print("============ 深複製測 list ============")
-print(deep_clone[0][4] is data[0][4])
+print(deep_clone[0][4] is data[0][4]) # 深複製且是集合，是 False
 print(f"原本兩個是 {data[0][4]}, {deep_clone[0][4]}")
 deep_clone[0][4][0] = 51
 print(f"修改後是 {data[0][4]}, {deep_clone[0][4]}")
@@ -97,14 +98,14 @@ print("============ 深複製測 tuple ============")
 # tuple 原本就不能修改
 
 print("============ 深複製測 set ============")
-print(deep_clone[0][6] is data[0][6])
+print(deep_clone[0][6] is data[0][6]) # 深複製且是集合，是 False
 print(f"原本兩個是 {data[0][6]}, {deep_clone[0][6]}")
 deep_clone[0][6].add(88)
 print(f"修改後是 {data[0][6]}, {deep_clone[0][6]}")
 print(deep_clone[0][6] is data[0][6], deep_clone is data)
 
 print("============ 深複製測 dict ============")
-print(deep_clone[0][7] is data[0][7])
+print(deep_clone[0][7] is data[0][7]) # 深複製且是集合，是 False
 print(f"原本兩個是 {data[0][7]}, {deep_clone[0][7]}")
 deep_clone[0][7] = {"k2": 777}
 print(f"修改後是 {data[0][7]}, {deep_clone[0][7]}")
