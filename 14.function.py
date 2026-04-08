@@ -44,7 +44,7 @@ def function_name3():
     print("into function_name333")
 
 
-function_name3()  # 宣告了兩個名稱一樣的方法，呼叫時會往上找到最近的
+function_name3()  # 宣告了兩個名稱一樣的方法，呼叫時會從此行往上開始找，找到就用
 
 print("============ 多個返回值 ============")
 
@@ -211,11 +211,10 @@ def conflicting(name, /, **kwds):  # 使用 / 解決衝突問題
     return 'name' in kwds
 
 
-print(conflicting(1, **{'name': 2}))
+print(conflicting(1, **{'name': 2})) # True
+print(conflicting(1, kwds = {'name': 2})) # False，因為傳的是 {'kwds': {'name': 2}}
 
 print("============ recursive ============")
-
-
 # 方法調用自己為 recursive (遞迴)
 
 
