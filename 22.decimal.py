@@ -56,6 +56,8 @@ print("============ 1 ============")
 f = 5.5
 test = Decimal(str(f))
 scale = '1.'
+# quantize 不給 rounding，預設是 ROUND_HALF_UP，也就是四捨五入；round 方法是 ROUND_HALF_EVEN，不能改 rounding
+print(test.quantize(Decimal(scale))) # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6
@@ -76,6 +78,7 @@ print(round(f))  # 6
 print("============ 3 ============")
 f = 6.5
 test = Decimal(str(f))
+print(test.quantize(Decimal(scale))) # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 6
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 6
@@ -85,6 +88,7 @@ print(round(f))  # 6
 print("============ 4 ============")
 f = 6.51
 test = Decimal(str(f))
+print(test.quantize(Decimal(scale))) # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 7
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 7
@@ -95,6 +99,7 @@ print("============ 5 ============")
 f = 64.52
 test = Decimal(str(f))
 scale = '.0'
+print(test.quantize(Decimal(scale))) # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_UP))  # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_DOWN))  # 64.5
 print(test.quantize(Decimal(scale), rounding=ROUND_HALF_EVEN))  # 64.5
