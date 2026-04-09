@@ -2,7 +2,7 @@ import random
 
 print("============ random、uniform，回傳 float ============")
 print(random.random())  # 回傳 0.0~1.0 之間的浮點數，不包括 1.0
-print(random.uniform(5.3, 7.8))  # 回傳兩數之間的浮點數，有可能包括第二個參數，取決於 random() 的捨入，看源碼
+print(random.uniform(5.3, 7.8))  # 回傳兩數之間的浮點數，有可能包括第二個參數
 
 print("============ randint、randrange，回傳 int ============")
 # 只能傳整數，之前的版本可傳浮點數
