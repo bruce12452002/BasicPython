@@ -54,6 +54,17 @@ print(my_tuple_tuple[2][0])
 my_tuple_tuple[2][0] = False  # tuple 裡有 list，list 是可變的，所以可以修改
 print(my_tuple_tuple[2])
 
+print("============ 子 tuple (不要用) ============")
+# tuple 沒有子 tuple 的包含方法，所以「不要用」<= >= 等…去比較
+# 可以轉成 set 再去判斷就好
+
+diff1 = (9, 5, 8, 4)
+diff2 = (4, 8, 5, 9, 7)
+print(diff1 <= diff2) # False
+print(diff1 >= diff2) # True
+# 並非是子 tuple 的關係，是取第一個元素判斷 9 <= 4，所以是 False
+# 如果第一個元素相等才再判斷第二個元素，依此類推
+
 print("============ 轉換 ============")
 s1 = list(my_tuple_tuple)
 s2 = set(my_tuple_tuple[0])

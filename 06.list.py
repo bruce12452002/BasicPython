@@ -70,6 +70,17 @@ print("============ 常用方法-其他 ============")
 myList5 = [7, 6.2, 5, 4.5]
 print(sum(myList5), max(myList5), min(myList5))  # 只支援數字和浮點數
 
+print("============ 子 list (不要用) ============")
+# list 沒有子 list 的包含方法，所以「不要用」<= >= 等…去比較
+# 可以轉成 set 再去判斷就好
+
+diff1 = [9, 5, 8, 4]
+diff2 = [4, 8, 5, 9, 7]
+print(diff1 <= diff2) # False
+print(diff1 >= diff2) # True
+# 並非是子 list 的關係，是取第一個元素判斷 9 <= 4，所以是 False
+# 如果第一個元素相等才再判斷第二個元素，依此類推
+
 print("============ 轉換 ============")
 myList2 = [1, 2, 3, (4, 5, 'a')]
 s1 = set(myList2)

@@ -92,6 +92,14 @@ print(my_dict4)
 my_dict4.clear()
 print(my_dict4)
 
+print("============ 子 dict ============")
+# <=，左邊是否為右邊的子 dict
+# >=，右邊是否為左邊的子 dict
+diff1 = {1: "a"}
+diff2 = {1: "a", 2: "b"}
+print(diff1.items() <= diff2.items())
+print(diff1.items() >= diff2.items())
+
 print("============ loop + dict ============")
 my_dict4 = {"k1": 100, "k2": 20}
 
