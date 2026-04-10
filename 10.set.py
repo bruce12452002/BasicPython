@@ -21,7 +21,7 @@ print("".__hash__())
 print(().__hash__()) # 因為不能增刪改，所以可 hash
 # 以上的值都不可變，所以才能 hash
 
-print([].__hash__)  # list 報錯
+print([].__hash__)  # list 為 None
 print({}.__hash__)  # dict 為 None
 print({1}.__hash__)  # set 為 None
 

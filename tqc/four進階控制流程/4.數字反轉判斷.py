@@ -17,9 +17,17 @@
 097531
 """
 n = 31283
+
+
+# 方法一： 除 10 取餘
 TEN = 10
 
 while n // TEN != 0:
     print(n % TEN, end="")
     n //= TEN
 print(n)
+
+# 方法二: slice
+n = 31283
+str_number = str(n)
+print(str_number[::-1])
