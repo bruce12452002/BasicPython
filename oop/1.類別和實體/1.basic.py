@@ -11,12 +11,14 @@ class Animal1:
 
 
 print("============ 類別 ============")
-print(Animal1.__doc__)  # 查看註解內容，使用 help(Animal) 也可以
+print(Animal1.__doc__)  # 查看註解內容，使用 help(Animal1) 也可以
 print(Animal1.__name__)  # 類別名稱，str 型態
 print(help(Animal1))
 
 print("============ 類別和實體 ============")
 # 要查詢實體的值要用實體去點；要查詢類別的值要用類別去點
+# 如果實體屬性沒有賦值，會去找類別屬性，只要實體屬性有賦值，就和類別屬性沒有關係了
+
 a = Animal1()
 print(a.c)  # 1
 a.c = 2  # 修改實體屬性

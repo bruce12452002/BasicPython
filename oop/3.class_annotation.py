@@ -1,6 +1,6 @@
 # @staticmethod：
 #   1. 沒有 cls 和 self 屬性，「不可」直接調用屬性；
-#   2. 和寫在全域方法一樣，只不過定義在 class 裡而已，但一寫會報錯，所以加了這個裝飾器
+#   2. 寫法和寫在全域方法一樣，只不過定義在 class 裡而已，但一寫會報錯，所以加了這個裝飾器
 # @classmethod：
 #   1. 第一個參數一定要是 cls(可亂打，但不建議)，表示此類別，「可」直接調用屬性；
 #   2. 如果操作的是同一個變數，類別會影響實體；但實體不會影響到類別
@@ -32,4 +32,5 @@ print(a1.name)
 Animal.name = "monkey"
 Animal.my_class_method()
 a1.my_class_method()
-print(a1.name)  # 被類別影響了
+# a1.name = 'xxx'
+print(a1.name)  # 如果 a1 沒有賦值，會去找類別屬性，只要 a1 有賦值，就和類別屬性沒有關係了
